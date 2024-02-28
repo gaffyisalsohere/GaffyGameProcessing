@@ -34,12 +34,20 @@ class TopLogic
     if (gamemode == false)
     {
       menu.keyHandler();
+      menu.choicerCredits();
+      menu.choicerLevel(levelID);
+      menu.choicerGM(gamemode);
       menu.Render();
+
+      println(gamemode, levelID);
     }
     if (gamemode == true)
     {
+      //Level-Specific calls
+      
       //Common Rendering: HUD
       hud.Render();
+      println(gamemode, levelID);
     }
   }
 }

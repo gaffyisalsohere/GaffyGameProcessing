@@ -127,23 +127,9 @@ class Menu
       }
     }
   }
-  void choicer()
+  void choicerCredits()
   {
-    if (selection == true && m1.choice == 0)
-    {
-      //p1.level = 0;
-      //p1.gm = true;
-    }
-    if (selection == true && m1.choice == 1)
-    {
-      //p1.level = 1;
-      //p1.gm = true;
-    }
-    if (selection == true && m1.choice == 2)
-    {
-      //p1.level = 2;
-      //p1.gm = true;
-    }
+
     if (selection == true && m1.choice == 3)
     {
       isCredits = true;
@@ -154,6 +140,33 @@ class Menu
       isCredits = false;
       m1.credits = false;
     }
+  }
+  int choicerLevel(int levelID)
+  {
+    println(selection + " " + m1.choice);
+    if (selection == true && m1.choice == 0)
+    {
+      return 1;
+    }
+    if (selection == true && m1.choice == 1)
+    {
+      return 2;
+    }
+    if (selection == true && m1.choice == 2)
+    {
+      return 3;
+    }
+    return 0;
+  }
+  boolean choicerGM(boolean gamemode)
+  {
+    println(selection + " " + m1.choice);
+    if (selection == true && m1.choice <= 3)
+    {
+      return true;
+    }
+
+    return false;
   }
   void keyStart(char k)
   {
