@@ -1,6 +1,6 @@
 class HUD
 {
-  int d, levelID;
+  int d, levelID, displaytimer;
   float xPos, yPos;
   PFont Menu;
   HUD()
@@ -62,7 +62,7 @@ class HUD
       triangle((xPos+1)*d, (yPos-7)*d, (xPos-6)*d, (yPos-4)*d, (xPos-3)*d, (yPos-14)*d);
       fill(255);      //ear fill
       triangle((xPos)*d, (yPos-8)*d, (xPos-4.5)*d, (yPos-5.5)*d, (xPos-3)*d, (yPos-13)*d);
-
+      displaytimer = t.leveltimer/60;
       //text
       textAlign(LEFT, TOP);
       fill(255);
@@ -72,7 +72,7 @@ class HUD
       fill(0);
       text(t.score, 48*d, 16*d);
       text("D" + t.dollers, 32*d, 32*d);
-      text(t.leveltimer, 96*d, 32*d);
+      text(displaytimer, 96*d, 32*d);
     }
   }
 }

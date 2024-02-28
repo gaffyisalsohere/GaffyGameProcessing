@@ -181,10 +181,10 @@ class Gaffy
     if (yPos  >= 528 || t.leveltimer < 0) //placeholder respawn
     {
       xPos = 64;
-      yPos = 192;
+      yPos = 384;
       t.hp = 3;
       t.lives = t.lives-1;
-      t.leveltimer = 400;
+      t.leveltimer = 23999;
     }
     //JUMPING LOGIC
     //jumpFlag -=1;

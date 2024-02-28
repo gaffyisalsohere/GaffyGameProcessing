@@ -7,6 +7,7 @@ class TopLogic
   Level2 l2;
   Level3 l3;
   Gaffy p1;
+
   int levelID, d, leveltimer, score, dollers, lives, hp;
   boolean gamemode;
   float xCam, yCam;
@@ -26,7 +27,7 @@ class TopLogic
     l3 = new Level3();
     lives = 3;
     hp = 3;
-    leveltimer = 400;
+    leveltimer = 23999;
     menu.isDebug=true; //debug flag! set to true for debug mode (a full level select)
   }
   void GameLoop()

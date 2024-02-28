@@ -1,4 +1,3 @@
-
 class GroundAll
 {
   Ground[] grounds;
