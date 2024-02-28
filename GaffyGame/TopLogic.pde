@@ -31,23 +31,30 @@ class TopLogic
     }
 
     //Level and Gamemode Logic
-    if (gamemode == false)
+    if (menu.choicerGM(gamemode) == false)
     {
       menu.keyHandler();
       menu.choicerCredits();
-      menu.choicerLevel(levelID);
-      menu.choicerGM(gamemode);
+      //menu.choicerLevel(levelID);
+      //menu.choicerGM(gamemode);
       menu.Render();
-
-      println(gamemode, levelID);
     }
-    if (gamemode == true)
+    if (menu.choicerGM(gamemode) == true)
     {
+      //Common Level Calls
+      hud.levelID = menu.choicerLevel(levelID);
       //Level-Specific calls
-      
+      if (menu.choicerLevel(levelID) == 1)
+      {
+      }
+      if (menu.choicerLevel(levelID) == 2)
+      {
+      }
+      if (menu.choicerLevel(levelID) == 3)
+      {
+      }
       //Common Rendering: HUD
       hud.Render();
-      println(gamemode, levelID);
     }
   }
 }

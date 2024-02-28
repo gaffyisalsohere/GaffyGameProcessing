@@ -1,6 +1,6 @@
 class HUD
 {
-  int d;
+  int d, levelID;
   float xPos, yPos;
   PFont Menu;
   HUD()
@@ -26,7 +26,7 @@ class HUD
       ellipse(40*d, 16*d, 14*d, 16*d);
       circle(20*d, 32*d, 16*d); //dollers (intentional spelling) count
       fill(#e1ae3f);  // level minimap bg
-      rect(176*d, 8*d, 64*d, 32*d);
+      rect(144*d, 8*d, 96*d, 32*d);
       circle(87*d, 32*d, 16*d); //timer
       fill(255);
       circle(87*d, 32*d, 14*d);
@@ -43,8 +43,8 @@ class HUD
       {
         ellipse(128*d, 16*d, 7*d, 15*d);
       }
-      xPos = 148;     //vestigial variables from Gaffy render script, didn't feel like rewriting them entirely
-      yPos = 36;      //used for life counter
+      xPos = 160;     //vestigial variables from Gaffy render script, didn't feel like rewriting them entirely
+      yPos = 32;      //used for life counter
       fill(#0c3460);  //back ear
       triangle((xPos-1)*d, (yPos-7)*d, (xPos+6)*d, (yPos-4)*d, (xPos+3)*d, (yPos-14)*d);
       fill(#1765bb);  //head base
@@ -67,7 +67,7 @@ class HUD
       textAlign(CENTER, TOP);
       fill(255);
       textFont(Menu);
-      //text(p1.level, 208*d, 20*d);
+      text("Lv 1-" + levelID, 208*d, 12*d);
       fill(0);
       //text(p1.score, 56*d, 16*d);
       //text(p1.dollers, 36*d, 32*d);
