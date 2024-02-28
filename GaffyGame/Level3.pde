@@ -1,5 +1,6 @@
 class Level3
 {
+  GroundAll ground;
   Gaffy p1;
   int d;
   Level3()
@@ -8,7 +9,5 @@ class Level3
   }
   void Render()
   {
-    p1.gaffyLogic();
-    p1.Render();
   }
 }

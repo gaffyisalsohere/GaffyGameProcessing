@@ -7,7 +7,6 @@ class TopLogic
   Level2 l2;
   Level3 l3;
   Gaffy p1;
-
   int levelID, d, leveltimer, score, dollers, lives, hp;
   boolean gamemode;
   float xCam, yCam;
@@ -21,7 +20,7 @@ class TopLogic
     }
     hud = new HUD();
     menu = new Menu();
-
+    p1 = new Gaffy(64, 384, 0, 90, 3);
     l1 = new Level1();
     l2 = new Level2();
     l3 = new Level3();
@@ -44,12 +43,34 @@ class TopLogic
     {
       manyClouds[i].Render();
     }
-
-    //CAMERA LOGIC
-
+    //Camera Logic
+    xCam = p1.xPos - 128;
+    yCam = p1.yPos - 128;
+    if (xCam < 0)
+    {
+      xCam = 0;
+    }
+    if (xCam > 768)
+    {
+      xCam = 768;
+    }
+    if (yCam < 0)
+    {
+      yCam = 0;
+    }
+    if (yCam > 256)
+    {
+      yCam = 256;
+    }
     //Level and Gamemode Logic
     if (menu.choicerGM(gamemode) == false)
     {
+
+      p1.gaffyLogic();
+      p1.xPos = 48;
+      p1.yPos = 172;
+      p1.dir = 1;
+      p1.Render();
       menu.keyHandler();
       menu.choicerCredits();
       //menu.choicerLevel(levelID);
@@ -58,83 +79,32 @@ class TopLogic
     }
     if (menu.choicerGM(gamemode) == true)
     {
-      //Common Level Calls
-      hud.levelID = menu.choicerLevel(levelID);
       //Level-Specific calls
       if (menu.choicerLevel(levelID) == 1)
       {
-        xCam = l1.p1.xPos - 128;
-        yCam = l1.p1.yPos - 128;
-        if (xCam < 0)
-        {
-          xCam = 0;
-        }
-        if (xCam > 768)
-        {
-          xCam = 768;
-        }
-        if (yCam < 0)
-        {
-          yCam = 0;
-        }
-        if (yCam > 256)
-        {
-          yCam = 256;
-        }
+
         translate((-xCam)*3, (-yCam)*3);
+        p1.gaffyLogic();
         l1.Render();
+        p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
       if (menu.choicerLevel(levelID) == 2)
       {
-        xCam = l2.p1.xPos - 128;
-        yCam = l2.p1.yPos - 128;
-        if (xCam < 0)
-        {
-          xCam = 0;
-        }
-        if (xCam > 768)
-        {
-          xCam = 768;
-        }
-        if (yCam < 0)
-        {
-          yCam = 0;
-        }
-        if (yCam > 256)
-        {
-          yCam = 256;
-        }
+
         translate((-xCam)*3, (-yCam)*3);
         l2.Render();
         translate((xCam)*3, (yCam)*3);
       }
       if (menu.choicerLevel(levelID) == 3)
       {
-        xCam = l3.p1.xPos - 128;
-        yCam = l3.p1.yPos - 128;
-        if (xCam < 0)
-        {
-          xCam = 0;
-        }
-        if (xCam > 768)
-        {
-          xCam = 768;
-        }
-        if (yCam < 0)
-        {
-          yCam = 0;
-        }
-        if (yCam > 256)
-        {
-          yCam = 256;
-        }
+
         translate((-xCam)*3, (-yCam)*3);
         l3.Render();
         translate((xCam)*3, (yCam)*3);
       }
-
       //Common Rendering: HUD
+      hud.levelID = menu.choicerLevel(levelID);
       hud.Render();
     }
   }

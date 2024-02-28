@@ -147,8 +147,10 @@ class Gaffy
   }
   void gaffyLogic()
   {
+    t.p1.hammerUse = hammerUse;
     if (hammerUse == true)
     {
+
       hammerUse = false;
       hammerTime =30;
     }
@@ -178,6 +180,7 @@ class Gaffy
       }
     }
     hammerTime --;
+    hammerTime = t.p1.hammerTime;
     if (yPos  >= 528 || t.leveltimer < 0) //placeholder respawn
     {
       xPos = 64;
