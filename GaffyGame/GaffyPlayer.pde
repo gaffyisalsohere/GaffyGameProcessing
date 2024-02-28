@@ -181,7 +181,7 @@ class Gaffy
     if (yPos  >= 528) //placeholder respawn
     {
       xPos = 64;
-
+      yPos = 192;
     }
     //JUMPING LOGIC
     //jumpFlag -=1;

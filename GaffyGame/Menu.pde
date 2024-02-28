@@ -143,7 +143,7 @@ class Menu
   }
   int choicerLevel(int levelID)
   {
-    println(selection + " " + m1.choice);
+
     if (selection == true && m1.choice == 0)
     {
       return 1;
@@ -160,7 +160,7 @@ class Menu
   }
   boolean choicerGM(boolean gamemode)
   {
-    println(selection + " " + m1.choice);
+    
     if (selection == true && m1.choice <= 3)
     {
       return true;

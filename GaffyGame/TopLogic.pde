@@ -3,8 +3,13 @@ class TopLogic
   Cloud[] manyClouds;
   HUD hud;
   Menu menu;
+  Level1 l1;
+  Level2 l2;
+  Level3 l3;
+  Gaffy p1;
   int levelID, d;
   boolean gamemode;
+  float xCam, yCam;
   TopLogic()
   { //define objects in TopLogic's Domain.
     d = 3;
@@ -15,6 +20,11 @@ class TopLogic
     }
     hud = new HUD();
     menu = new Menu();
+
+    l1 = new Level1();
+    l2 = new Level2();
+    l3 = new Level3();
+
     menu.isDebug=true; //debug flag! set to true for debug mode (a full level select)
   }
   void GameLoop()
@@ -29,6 +39,8 @@ class TopLogic
     {
       manyClouds[i].Render();
     }
+
+    //CAMERA LOGIC
 
     //Level and Gamemode Logic
     if (menu.choicerGM(gamemode) == false)
@@ -46,13 +58,77 @@ class TopLogic
       //Level-Specific calls
       if (menu.choicerLevel(levelID) == 1)
       {
+        xCam = l1.p1.xPos - 128;
+        yCam = l1.p1.yPos - 128;
+        if (xCam < 0)
+        {
+          xCam = 0;
+        }
+        if (xCam > 768)
+        {
+          xCam = 768;
+        }
+        if (yCam < 0)
+        {
+          yCam = 0;
+        }
+        if (yCam > 256)
+        {
+          yCam = 256;
+        }
+        translate((-xCam)*3, (-yCam)*3);
+        l1.Render();
+        translate((xCam)*3, (yCam)*3);
       }
       if (menu.choicerLevel(levelID) == 2)
       {
+        xCam = l2.p1.xPos - 128;
+        yCam = l2.p1.yPos - 128;
+        if (xCam < 0)
+        {
+          xCam = 0;
+        }
+        if (xCam > 768)
+        {
+          xCam = 768;
+        }
+        if (yCam < 0)
+        {
+          yCam = 0;
+        }
+        if (yCam > 256)
+        {
+          yCam = 256;
+        }
+        translate((-xCam)*3, (-yCam)*3);
+        l2.Render();
+        translate((xCam)*3, (yCam)*3);
       }
       if (menu.choicerLevel(levelID) == 3)
       {
+        xCam = l3.p1.xPos - 128;
+        yCam = l3.p1.yPos - 128;
+        if (xCam < 0)
+        {
+          xCam = 0;
+        }
+        if (xCam > 768)
+        {
+          xCam = 768;
+        }
+        if (yCam < 0)
+        {
+          yCam = 0;
+        }
+        if (yCam > 256)
+        {
+          yCam = 256;
+        }
+        translate((-xCam)*3, (-yCam)*3);
+        l3.Render();
+        translate((xCam)*3, (yCam)*3);
       }
+
       //Common Rendering: HUD
       hud.Render();
     }
