@@ -31,15 +31,15 @@ class HUD
       fill(255);
       circle(87*d, 32*d, 14*d);
       fill(#1765bb);   //health meter
-      //if (player.health >=1)
+      if (t.hp >=1)
       {
         ellipse(112*d, 16*d, 7*d, 15*d);
       }
-      //if (player.health >=2)
+      if (t.hp >=2)
       {
         ellipse(120*d, 16*d, 7*d, 15*d);
       }
-      //if (player.health ==3)
+      if (t.hp ==3)
       {
         ellipse(128*d, 16*d, 7*d, 15*d);
       }
@@ -64,14 +64,15 @@ class HUD
       triangle((xPos)*d, (yPos-8)*d, (xPos-4.5)*d, (yPos-5.5)*d, (xPos-3)*d, (yPos-13)*d);
 
       //text
-      textAlign(CENTER, TOP);
+      textAlign(LEFT, TOP);
       fill(255);
       textFont(Menu);
-      text("Lv 1-" + levelID, 208*d, 12*d);
+      text("LVL 1-" + levelID, 176*d, 16*d);
+      //text("x"+t.lives, 176*d, 28*d);
       fill(0);
-      //text(p1.score, 56*d, 16*d);
-      //text(p1.dollers, 36*d, 32*d);
-      //text(p1.leveltimer, 104*d, 32*d);
+      text(t.score, 48*d, 16*d);
+      text("D" + t.dollers, 32*d, 32*d);
+      text(t.leveltimer, 96*d, 32*d);
     }
   }
 }

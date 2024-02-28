@@ -178,10 +178,13 @@ class Gaffy
       }
     }
     hammerTime --;
-    if (yPos  >= 528) //placeholder respawn
+    if (yPos  >= 528 || t.leveltimer < 0) //placeholder respawn
     {
       xPos = 64;
       yPos = 192;
+      t.hp = 3;
+      t.lives = t.lives-1;
+      t.leveltimer = 400;
     }
     //JUMPING LOGIC
     //jumpFlag -=1;
@@ -202,7 +205,7 @@ class Gaffy
       yPos = (yPos - 7 + (yVelocity));
     }
 
-    if (gm == true)
+    if (t.gamemode == true)
     {
       if (keyj == true)
       {

@@ -17,14 +17,18 @@ void setup()
 
 void keyPressed()
 {
-  //p1.keyStart(key);
+  t.l1.p1.keyStart(key);
+  t.l2.p1.keyStart(key);
+  t.l3.p1.keyStart(key);
   t.menu.keyStart(key);
 }
 
 
 void keyReleased()
 {
-  //p1.keyStop(key);
+  t.l1.p1.keyStop(key);
+  t.l2.p1.keyStop(key);
+  t.l3.p1.keyStop(key);
   t.menu.keyStop(key);
 }
 void draw()
