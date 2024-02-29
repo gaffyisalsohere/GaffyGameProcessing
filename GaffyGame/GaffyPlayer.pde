@@ -1,7 +1,7 @@
 class Gaffy
 {//its me!
   float xPos, yPos, grabX, grabY, xSpeed, ySpeed, gravity, yVelocity, jumpModifier, jumpFlag, tailAngle, hammerHitX, hammerHitY;
-  int d, animTimer, dir, grabbingID, hammerTime, score, dollers, leveltimer, health, iframe;
+  int d, animTimer, dir, grabbingID, hammerTime, score, dollers, leveltimer, health, iframe, hitDir;
   boolean keyw, keya, keys, keyd, keyj, keyk, keyl, isGrabbing, hammerUse;
 
   //for whatever reason including these variables here makes things nicer

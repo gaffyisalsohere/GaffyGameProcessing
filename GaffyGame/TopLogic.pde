@@ -45,7 +45,7 @@ class TopLogic
     }
     //Camera Logic
     xCam = p1.xPos - 128;
-    yCam = p1.yPos - 128;
+    yCam = p1.yPos - 96;
     if (xCam < 0)
     {
       xCam = 0;
@@ -65,7 +65,7 @@ class TopLogic
     //Level and Gamemode Logic
     if (menu.choicerGM(gamemode) == false)
     {
-
+      leveltimer = 23999;
       p1.gaffyLogic();
       p1.xPos = 48;
       p1.yPos = 172;
@@ -106,6 +106,12 @@ class TopLogic
       //Common Rendering: HUD
       hud.levelID = menu.choicerLevel(levelID);
       hud.Render();
+    }
+    if (menu.isDebug == true)
+    {
+      textAlign(LEFT, TOP);
+      fill(255);
+      text(frameRate, -8*d, 216*d);
     }
   }
 }

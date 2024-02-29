@@ -1,5 +1,5 @@
 //GAFFYGAME V1.24.2.28
-//NOW REWRITTEN FROM SCRATCH TO BE LESS BAD
+//
 //MENU CONTROLS: W and S move cursor, J selects, K backs out of credits
 //GAME CONTROLS: A and D move left and right, J jumps, hold K to hold small boxes, L hammers.
 TopLogic t;
@@ -18,16 +18,12 @@ void setup()
 void keyPressed()
 {
   t.p1.keyStart(key);
-  t.p1.keyStart(key);
-  t.p1.keyStart(key);
   t.menu.keyStart(key);
 }
 
 
 void keyReleased()
 {
-  t.p1.keyStop(key);
-  t.p1.keyStop(key);
   t.p1.keyStop(key);
   t.menu.keyStop(key);
 }

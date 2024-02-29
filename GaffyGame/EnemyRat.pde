@@ -1,12 +1,14 @@
 //Hitbox hitbox;
 class Rat
 {
+  Hitbox hitbox;
   boolean dead;
   float xPos, yPos, lTarget, rTarget, PawHeightA, PawHeightB, speed;
   int stepTimer, d;
   int dir; //0 and 1 = left and right, respectively. Bool'ing it broke, oh well
   Rat(float x, float y, int f, float l, float r, float s)
   {
+
     xPos = x;
     yPos = y;
     dir = f;
@@ -18,8 +20,10 @@ class Rat
     PawHeightB=1.5;
   }
   void Render()
-
   {
+
+    hitbox = new Hitbox((xPos/d)-2, (yPos/d)-16, 28, 16);
+    hitbox.dead = dead;
     if (dead==false);
     {
       if (speed > 1.5) //sanity check; dont fast the rat
@@ -47,7 +51,7 @@ class Rat
         stepTimer=30;
       }
       d = 3;
-      //hitbox.Render();
+
       if (dir==0)//0 = left
       { //DRAW A RAT facing left if it's facing left.
         fill(#000000); //from-camera paws
@@ -120,5 +124,6 @@ class Rat
         }
       }
     }
+    hitbox.Collide();
   }
 }
