@@ -13,7 +13,7 @@ class GroundAll
 
     g3 = new Ground(-48, 416, 128, 192);
 
-    g4 = new Ground(384, 368, 896, 32);
+    g4 = new Ground(384, 384, 896, 32);
   }
   void LevelInit()
   { //arrayify ground for collision

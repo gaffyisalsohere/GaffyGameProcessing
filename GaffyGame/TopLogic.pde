@@ -7,7 +7,7 @@ class TopLogic
   Level2 l2;
   Level3 l3;
   Gaffy p1;
-  int levelID, d, leveltimer, score, dollers, lives, hp;
+  int levelID, d, leveltimer, score, dollers, lives, hp, endTimer;
   boolean gamemode;
   float xCam, yCam;
   TopLogic()
@@ -27,10 +27,27 @@ class TopLogic
     lives = 3;
     hp = 3;
     leveltimer = 23999;
-    menu.isDebug=true; //debug flag! set to true for debug mode (a full level select)
+    menu.isDebug=true; //debug flag! set to true for debug mode (a full level select and fps meter)
+    endTimer = 300;
   }
   void GameLoop()
   {
+    println(t.menu.choicerLevel(levelID));
+    if (dollers >= 100)
+    {
+      lives++;
+      dollers = 0;
+    }
+    if (t.p1.gameover == true)
+    {
+      endTimer --;
+    }
+    if (endTimer <= 0)
+    {
+      exit();
+      //menu.keyj = false;
+      //menu.choicerGM(true) = false;
+    }
     leveltimer--;
     gamemode = menu.choicerGM(gamemode);
     //Common Rendering: BG
@@ -111,7 +128,7 @@ class TopLogic
     {
       textAlign(LEFT, TOP);
       fill(255);
-      text(frameRate, -8*d, 216*d);
+      text(nf(frameRate, 3, 1)+"fps", -8*d, 216*d);
     }
   }
 }

@@ -1,12 +1,12 @@
 //Hitbox hitbox;
-class Rat
+class MadRat
 {
   Hitbox hitbox;
   boolean safe;
   float xPos, yPos, lTarget, rTarget, PawHeightA, PawHeightB, speed, yVelocity;
   int stepTimer, d, rotate;
   int dir; //0 and 1 = left and right, respectively. Bool'ing it broke, oh well
-  Rat(float x, float y, int f, float l, float r, float s)
+  MadRat(float x, float y, int f, float l, float r, float s)
   {
 
     xPos = x;
@@ -20,7 +20,7 @@ class Rat
     PawHeightB=1.5;
     hitbox = new Hitbox((xPos/d)-2, (yPos/d)-16, 28, 16);
     yVelocity = -5;
-    safe = true;
+    safe = false;
   }
   void Render()
   {
@@ -63,13 +63,13 @@ class Rat
       triangle(xPos+(22*d), yPos-(6*d), xPos+(18*d), yPos-(6*d), xPos+(24*d), yPos-(16*d));//tail
       fill(#143d52);
       ellipse(xPos+(2*d), yPos-(12*d), 7*d, 8*d);// back ear
-      fill(#3f9fcf);
+      fill(#257298);
       ellipse(xPos+(11*d), yPos-(6*d), 22*d, 11*d);//body
       ellipse(xPos+(2*d), yPos-(8*d), 11*d, 9*d);//head A
-      fill(#00e600);
+      fill(#e6e600);
       ellipse(xPos, yPos-28, 1*d, 2*d);//eyes
       ellipse(xPos-(2*d), yPos-28, 1*d, 2*d);
-      fill(#3f9fcf);
+      fill(#257298);
       ellipse(xPos-(2*d), yPos-(6*d), 16*d, 5*d);//head B
       ellipse(xPos+(4*d), yPos-(12*d), 7*d, 8*d);//front ear A
       fill(#e0743e);
@@ -99,13 +99,13 @@ class Rat
       triangle(xPos+(2*d), yPos-(6*d), xPos+(6*d), yPos-(6*d), xPos+(0*d), yPos-(16*d));//tail
       fill(#143d52);
       ellipse(xPos+(22*d), yPos-(12*d), 7*d, 8*d);// back ear
-      fill(#3f9fcf);
+      fill(#257298);
       ellipse(xPos+(13*d), yPos-(6*d), 22*d, 11*d);//body
       ellipse(xPos+(22*d), yPos-(8*d), 11*d, 9*d);//head A
-      fill(#00e600);
+      fill(#e6e600);
       ellipse(xPos+(24*d), yPos-28, 1*d, 2*d);//eyes
       ellipse(xPos+(26*d), yPos-28, 1*d, 2*d);
-      fill(#3f9fcf);
+      fill(#257298);
       ellipse(xPos+(26*d), yPos-(6*d), 16*d, 5*d);//head B
       ellipse(xPos+(20*d), yPos-(12*d), 7*d, 8*d);//front ear A
       fill(#e0743e);

@@ -25,6 +25,10 @@ class HUD
       ellipse(20*d, 16*d, 14*d, 16*d);
       ellipse(40*d, 16*d, 14*d, 16*d);
       circle(20*d, 32*d, 16*d); //dollers (intentional spelling) count
+      fill(90);
+      circle(20*d, 32*d, 14*d);
+      fill(150);
+      circle(20*d, 32*d, 12*d);
       fill(#e1ae3f);  // level minimap bg
       rect(144*d, 8*d, 96*d, 32*d);
       circle(87*d, 32*d, 16*d); //timer
@@ -68,13 +72,24 @@ class HUD
       fill(255);
       textFont(Menu);
       text("LVL 1-" + levelID, 176*d, 16*d);
-      //text("x"+t.lives, 176*d, 28*d);
+      text("x"+t.lives, 176*d, 28*d);
       fill(0);
 
       text("D" + t.dollers, 32*d, 32*d);
       text(displaytimer, 96*d, 32*d);
       textAlign(RIGHT, TOP);
       text(t.score + "pt", 104*d, 16*d);
+
+      if (t.p1.gameover == true)
+      {
+        rectMode(CENTER);
+        fill(#e1ae3f);  // level minimap bg
+        rect(128*d, 128*d, 96*d, 24*d);
+        rectMode(CORNER);
+        fill(255);
+        textAlign(CENTER, CENTER);
+        text("GAME OVER!", 128*d, 128*d);
+      }
     }
   }
 }

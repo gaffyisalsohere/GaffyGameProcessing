@@ -1,29 +1,25 @@
-/*
-    if (t.levelID==3)
-    {
-      for (int i = 0; i < t.l3.ground.grounds.length; i++) //collider, modified from player collider;
-      {
-        if (((t.l3.ground.grounds[i].xPos + t.l3.ground.grounds[i].xScale-(16*Scale)) < xPos && (t.l3.ground.grounds[i].xPos + t.l3.ground.grounds[i].xScale) > xPos) && ((t.l3.ground.grounds[i].yPos - (16*Scale) < yPos) && (t.l3.ground.grounds[i].yPos + t.l3.ground.grounds[i].yScale  >= yPos))) //hit a left wall?
+/* NOT REAL CODE,MOSTLY TO COPY BIG CODE AND HAVE FORMATTING FEATUReS
+
+        for (int i = 1; i < t.l3.boxes.boxes.length; i++)
         {
-          xPos = (t.l3.ground.grounds[i].xPos + t.l3.ground.grounds[i].xScale); //stop
-          xSpeed = 0;
+          if ((((yPos-20 < t.l3.boxes.boxes[i].yPos && (yPos+yScale) > t.l3.boxes.boxes[i].yPos) && ((xPos  - 4 < t.l3.boxes.boxes[i].yPos) && (xPos + 4 + xScale >  t.l3.boxes.boxes[i].yPos)))))
+          {
+            dead = true;
+            t.score += 100;
+          }
         }
-        if (((t.l3.ground.grounds[i].xPos-(16*Scale) < xPos && (t.l3.ground.grounds[i].xPos) > xPos) && ((t.l3.ground.grounds[i].yPos  - (16*Scale) < yPos) && (t.l3.ground.grounds[i].yPos + t.l3.ground.grounds[i].yScale  >= yPos)))) //hit a right wall?
-        {
-          xPos = (t.l3.ground.grounds[i].xPos -(16*Scale));
-          xSpeed = 0;//stop
-        }
-        if ((((t.l3.ground.grounds[i].yPos) < yPos && (t.l3.ground.grounds[i].yPos + t.l3.ground.grounds[i].yScale+16) > yPos) && ((t.l3.ground.grounds[i].xPos < xPos) && (t.l3.ground.grounds[i].xPos + xScale > xPos)))) //hit ceiling?
-        {
-          yPos = (t.l3.ground.grounds[i].yPos + t.l3.ground.grounds[i].yScale + 18); //stop, *and* properly reset jumps
-          yVelocity = 3;
-          println(3);
-        }
-        if (((t.l3.ground.grounds[i].yPos-(16*Scale) < yPos && (t.l3.ground.grounds[i].yPos) > yPos) && ((t.l3.ground.grounds[i].xPos  - 4 < xPos) && (t.l3.ground.grounds[i].xPos + 4 + t.l3.ground.grounds[i].xScale >  xPos)))) //hit floor?
-        {
-          yPos = (t.l3.ground.grounds[i].yPos - (16*Scale)); //stop, *and* properly reset jumps
-          yVelocity = 0;
-          xSpeed=0;
-        }
-        */
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/        

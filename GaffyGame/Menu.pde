@@ -3,7 +3,7 @@ class Menu
   Ground g1;
   MenuPointer m1;
   int d;
-  int menuSelect, buttonPressed;
+  int menuSelect, buttonPressed, levelID;
   boolean selection, back;
   boolean isDebug, isCredits;
   boolean keyw, keya, keys, keyd, keyj, keyk, keyl;
@@ -158,14 +158,17 @@ class Menu
 
     if (selection == true && m1.choice == 0)
     {
+      levelID = 1;
       return 1;
     }
     if (selection == true && m1.choice == 1)
     {
+      levelID = 2;
       return 2;
     }
     if (selection == true && m1.choice == 2)
     {
+      levelID = 3;
       return 3;
     }
     return 0;
