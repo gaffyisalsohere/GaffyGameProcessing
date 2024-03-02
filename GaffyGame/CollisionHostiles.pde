@@ -52,6 +52,15 @@ class Hitbox
         dead = true;
         t.score += 100;
       }
+      if ((xPos > t.boulder.xPos-(20)) && ((xPos+(20) < t.boulder.xPos+(20))))
+      {
+        if (yPos > t.boulder.yPos -(20) && (yPos+(20) < t.boulder.yPos+(20)))
+        {
+          dead = true;
+          t.score += 100;
+          //println("hit!");
+        }
+      }
       if (t.menu.choicerLevel(1) == 1)
       {
         for (int i = 1; i < t.l1.boxes.boxes.length; i++)

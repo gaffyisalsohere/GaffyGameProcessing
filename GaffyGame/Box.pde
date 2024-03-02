@@ -60,6 +60,7 @@ class Box
           if (yPos > t.boulder.yPos -(16*Scale*2) && (yPos+(Scale*16) < t.boulder.yPos+(16*Scale*2)-4))
           {
             smashed = true;
+            t.score += 50;
             //println("hit!");
           }
         }
@@ -72,6 +73,7 @@ class Box
           if (yPos > t.p1.hammerHitY -(16*Scale*2) && (yPos+(Scale*16) < t.p1.hammerHitY+(16*Scale*2)))
           {
             smashed = true;
+            t.score += 50;
             //println("hit!");
           }
         }

@@ -49,7 +49,14 @@ class Menu
       rect(24*d, 24*d, 212*d, 188*d, 50);
       fill(255);
       textAlign(LEFT, TOP);
-      text("GAFFYGAME v" + t.vernum, 32*d, 32*d);
+      if (isDebug == true);
+      {
+        text("GAFFYGAME v" + t.vernum, 32*d, 32*d);
+      }
+      if (isDebug == false);
+      {
+        text("GAFFYGAME ALPHA VERSION", 32*d, 32*d);
+      }
       text("GAME CODE WRITTEN", 32*d, 48*d);
       text("BY COLBY 'GAFFY' HOCKING", 32*d, 64*d);
       text("FONTS ARE PENGO ARCADE", 32*d, 80*d);

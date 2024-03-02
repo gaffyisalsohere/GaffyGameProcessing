@@ -42,6 +42,7 @@ class Doller
       if (((t.p1.xPos+8 > xPos-8) && (t.p1.xPos-8 < xPos+8)) && ((t.p1.yPos+8 > yPos-8) && (t.p1.yPos-8 < yPos+8)))
       {
         t.dollers ++;
+        t.score += 10;
         collected = true;
       }
     }

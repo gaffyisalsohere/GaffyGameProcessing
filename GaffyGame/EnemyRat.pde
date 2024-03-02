@@ -129,12 +129,13 @@ class Rat
     }
     if (hitbox.dead == false)
     {
-    hitbox.Collide();
+      hitbox.Collide();
     }
     if (hitbox.dead == true)
     {
       yVelocity += 0.3;
       yPos = yPos + yVelocity;
     }
+
   }
 }
