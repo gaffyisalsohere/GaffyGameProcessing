@@ -7,6 +7,7 @@ class TopLogic
   Level2 l2;
   Level3 l3;
   Gaffy p1;
+  String vernum;
   int levelID, d, leveltimer, score, dollers, lives, hp, endTimer;
   boolean gamemode;
   float xCam, yCam;
@@ -32,6 +33,7 @@ class TopLogic
   }
   void GameLoop()
   {
+    text(vernum, 1024,1024);
     println(t.menu.choicerLevel(levelID));
     if (dollers >= 100)
     {
