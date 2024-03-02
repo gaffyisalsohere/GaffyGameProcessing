@@ -1,4 +1,4 @@
-//GAFFYGAME
+//GAFFYGAME ALPHA
 //
 //MENU CONTROLS: W and S move cursor, J selects, K backs out of credits
 //GAME CONTROLS: A and D move left and right, J jumps, hold K to hold small boxes, L hammers.

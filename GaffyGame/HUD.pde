@@ -74,8 +74,14 @@ class HUD
       text("LVL 1-" + levelID, 176*d, 16*d);
       text("x"+t.lives, 176*d, 28*d);
       fill(0);
-
-      text("D" + t.dollers, 32*d, 32*d);
+      if (t.dollers < 10)
+      {
+        text("D0"+t.dollers, 32*d, 32*d);
+      }
+      if (t.dollers >= 10)
+      {
+        text("D"+t.dollers, 32*d, 32*d);
+      }
       text(displaytimer, 96*d, 32*d);
       textAlign(RIGHT, TOP);
       text(t.score + "pt", 104*d, 16*d);

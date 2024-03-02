@@ -15,14 +15,14 @@ class Doller
   {
     if (collected == false)
     {
-      //ellipseMode(CORNER);
+
       fill(150);
       ellipse(xPos*d, yPos*d, spinValue*16*d, 16*d);
       fill(90);
       ellipse((xPos)*d, (yPos)*d, spinValue*14*d, 14*d);
       fill(150);
       ellipse((xPos)*d, (yPos)*d, spinValue*12*d, 12*d);
-      //ellipseMode(CENTER);
+
       if (spinValue >=0.25 && extreme == true)
       {
         spinValue -= 0.05;
@@ -38,6 +38,11 @@ class Doller
       if (spinValue >=1)
       {
         extreme = true;
+      }
+      if (((t.p1.xPos+8 > xPos-8) && (t.p1.xPos-8 < xPos+8)) && ((t.p1.yPos+8 > yPos-8) && (t.p1.yPos-8 < yPos+8)))
+      {
+        t.dollers ++;
+        collected = true;
       }
     }
   }

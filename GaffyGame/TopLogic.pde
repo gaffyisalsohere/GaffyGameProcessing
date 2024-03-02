@@ -34,7 +34,7 @@ class TopLogic
   void GameLoop()
   {
     text(vernum, 1024,1024);
-    println(t.menu.choicerLevel(levelID));
+    //println(t.menu.choicerLevel(levelID));
     if (dollers >= 100)
     {
       lives++;
