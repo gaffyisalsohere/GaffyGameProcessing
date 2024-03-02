@@ -61,7 +61,7 @@ class Box
           if (yPos > t.p1.hammerHitY -(16*Scale*2) && (yPos+(Scale*16) < t.p1.hammerHitY+(16*Scale*2)))
           {
             smashed = true;
-            println("hit!");
+            //println("hit!");
           }
         }
       }

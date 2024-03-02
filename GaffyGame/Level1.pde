@@ -2,9 +2,10 @@ class Level1
 {
   GroundAll ground;
   DollerAll doller;
+  BoxAll boxes;
   Rat rat1, rat2;
   MadRat mad1;
-  BoxAll boxes;
+
   int d, timestart;
   boolean levelInit;
 
@@ -31,6 +32,7 @@ class Level1
       t.p1.yPos = 416;
       levelInit = true;
     }
+
     ground.Render();
     doller.Render();
     rat1.Render();

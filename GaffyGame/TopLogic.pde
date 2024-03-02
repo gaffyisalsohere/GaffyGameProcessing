@@ -7,6 +7,7 @@ class TopLogic
   Level2 l2;
   Level3 l3;
   Gaffy p1;
+  Boulder boulder;
   String vernum;
   int levelID, d, leveltimer, score, dollers, lives, hp, endTimer;
   boolean gamemode;
@@ -21,7 +22,9 @@ class TopLogic
     }
     hud = new HUD();
     menu = new Menu();
+    Boulder boulder;
     p1 = new Gaffy(64, 384, 0, 90, 3);
+    boulder = new Boulder(448, 384);
     l1 = new Level1();
     l2 = new Level2();
     l3 = new Level3();
@@ -33,7 +36,7 @@ class TopLogic
   }
   void GameLoop()
   {
-    text(vernum, 1024,1024);
+    text(vernum, 1024, 1024);
     //println(t.menu.choicerLevel(levelID));
     if (dollers >= 100)
     {
