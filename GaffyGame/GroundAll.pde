@@ -1,7 +1,7 @@
 class GroundAll
 {
   Ground[] grounds;
-  Ground g1, g2, g3, g4;
+  Ground g1, g2, g3, g4, g5;
   int level;
   GroundAll(int l)
   {
@@ -14,6 +14,7 @@ class GroundAll
     g3 = new Ground(-48, 416, 128, 192);
 
     g4 = new Ground(384, 384, 896, 32);
+    g5 = new Ground(256, 400, 128, 32);
   }
   void LevelInit()
   { //arrayify ground for collision
@@ -28,6 +29,7 @@ class GroundAll
       grounds = (Ground[])  append(grounds, g2);
       grounds = (Ground[])  append(grounds, g3);
       grounds = (Ground[])  append(grounds, g4);
+      grounds = (Ground[])  append(grounds, g5);
     }
     if (level == 2)
     {

@@ -2,6 +2,7 @@ class Ground
 {
   GroundDetail[] detail;
   CollisionSolids collide;
+  CollideBoulder collideB;
   float xPos, yPos;
   int d, xScale, yScale, id, tileX, tileY, tileTotal;
   Ground(float x, float y, int xs, int ys)
@@ -28,7 +29,8 @@ class Ground
       }
     }
 
-    collide = new CollisionSolids(xPos, yPos, xScale, yScale); //hook collision into it
+    collide = new CollisionSolids(xPos, yPos, xScale, yScale);
+    collideB = new CollideBoulder(xPos, yPos, xScale, yScale); //hook collision into it
     d=3;
     if (yScale < 16)
     {
@@ -39,6 +41,7 @@ class Ground
       xScale = 16;
     }
     collide.Collide();
+    collideB.Collide();
     noStroke(); //draw the ground
     fill(#8c633c);
     rect(xPos*d, yPos*d, xScale*d, yScale*d);

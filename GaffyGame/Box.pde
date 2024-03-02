@@ -53,6 +53,17 @@ class Box
           yVelocity = 10;
         }
       }
+      //if (t.boulder.rolling !=0)
+      {
+        if ((xPos > t.boulder.xPos-(16*Scale*2)) && ((xPos+(Scale*16) < t.boulder.xPos+(16*Scale*2))))
+        {
+          if (yPos > t.boulder.yPos -(16*Scale*2) && (yPos+(Scale*16) < t.boulder.yPos+(16*Scale*2)-4))
+          {
+            smashed = true;
+            //println("hit!");
+          }
+        }
+      }
       //t.p1.hammer logic
       if (t.p1.hammerTime > 0)
       {

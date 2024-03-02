@@ -22,7 +22,7 @@ class TopLogic
     }
     hud = new HUD();
     menu = new Menu();
-    Boulder boulder;
+
     p1 = new Gaffy(64, 384, 0, 90, 3);
     boulder = new Boulder(448, 384);
     l1 = new Level1();
@@ -106,8 +106,10 @@ class TopLogic
       {
 
         translate((-xCam)*3, (-yCam)*3);
+
         p1.gaffyLogic();
         l1.Render();
+        boulder.Render();
         p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
@@ -115,14 +117,18 @@ class TopLogic
       {
 
         translate((-xCam)*3, (-yCam)*3);
+        p1.gaffyLogic();
         l2.Render();
+        p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
       if (menu.choicerLevel(levelID) == 3)
       {
 
         translate((-xCam)*3, (-yCam)*3);
+        p1.gaffyLogic();
         l3.Render();
+        p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
       //Common Rendering: HUD

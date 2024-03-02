@@ -21,7 +21,7 @@ class Level1
     boxes.LevelInit();
     rat1 = new Rat(224*d, 384*d, 0, 192*d, 288*d, 0.8);
     rat2 = new Rat(64*d, 416*d, 0, -64*d, 48*d, 1.2);
-    mad1 = new MadRat(420*d, 384*d, 0, 384*d, 512*d, 0.8);
+    mad1 = new MadRat(512*d, 384*d, 0, 512*d, 640*d, 0.8);
     ;
   }
   void Render()
