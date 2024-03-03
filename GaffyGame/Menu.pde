@@ -63,9 +63,12 @@ class Menu
       text("BY COLBY 'GAFFY' HOCKING", 32*d, 64*d);
       text("FONTS ARE PENGO ARCADE", 32*d, 80*d);
       text("AND ASTRON BOY", 32*d, 96*d);
-      text("SPECIAL THANKS TO OZ", 32*d, 120*d);
-      text("FOR HELP GETTING TO", 32*d, 136*d);
-      text("1.x.x.x BUILD", 32*d, 152*d);
+      text("TEMP AUDIO C. NINTENDO", 32*d, 112*d);
+      text("SPECIAL THANKS TO OZ", 32*d, 128*d);
+
+      text("FOR HELP GETTING TO", 32*d, 144*d);
+
+      text("1.x.x.x BUILD", 32*d, 160*d);
       text("PRESS K TO RETURN", 32*d, 192*d);
     }
     //Title
@@ -162,25 +165,25 @@ class Menu
       m1.credits = false;
     }
   }
-  int choicerLevel(int levelID)
+  void choicerLevel()
   {
 
     if (selection == true && m1.choice == 0)
     {
-      levelID = 1;
-      return 1;
+      t.levelID = 1;
+
     }
     if (selection == true && m1.choice == 1)
     {
-      levelID = 2;
-      return 2;
+      t.levelID = 2;
+
     }
     if (selection == true && m1.choice == 2)
     {
-      levelID = 3;
-      return 3;
+      t.levelID = 3;
+
     }
-    return 0;
+
   }
   boolean choicerGM(boolean gamemode)
   {

@@ -7,6 +7,7 @@ class Level3
   int d;
   Level3()
   {
+
     ground = new GroundAll(1);
     ground.LevelInit();
     doller = new DollerAll(1);
@@ -16,5 +17,9 @@ class Level3
   }
   void Render()
   {
+    if (lv3.isPlaying() == false&& t.levelClear == false)
+    {
+      lv3.play();
+    }
   }
 }

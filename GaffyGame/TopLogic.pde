@@ -9,8 +9,8 @@ class TopLogic
   Gaffy p1;
   Boulder boulder;
   String vernum;
-  int levelID, d, leveltimer, score, dollers, lives, hp, endTimer;
-  boolean gamemode;
+  int levelID, d, leveltimer, score, dollers, lives, hp, endTimer, scoreBonus, clearTimer;
+  boolean gamemode, levelClear, tallyDone;
   float xCam, yCam;
   TopLogic()
   { //define objects in TopLogic's Domain.
@@ -37,9 +37,43 @@ class TopLogic
   void GameLoop()
   {
     text(vernum, 1024, 1024);
-    //println(t.menu.choicerLevel(levelID));
+    //println((levelID));
+    if (levelClear == true)
+    {
+      if (tallyDone == false)
+      {
+        scoreBonus = (leveltimer / 60) * 10;
+        score =  score + scoreBonus;
+        scoreBonus = 0;
+        lclear.play();
+        lv1.stop();
+        lv2.stop();
+        lv3.stop();
+        clearTimer = 120;
+        tallyDone = true;
+      }
+      clearTimer--;
+      if (clearTimer <= 0)
+      {
+        if (t.levelID == 1)
+        {
+          t.levelClear = false;
+          levelID =2;
+        }
+        if (t.levelID == 2)
+        {
+          t.levelClear = false;
+          levelID = 3;
+        }
+        if (t.levelID == 3)
+        {
+          exit();
+        }
+      }
+    }
     if (dollers >= 100)
     {
+      oneup.play();
       lives++;
       dollers = 0;
     }
@@ -53,7 +87,10 @@ class TopLogic
       //menu.keyj = false;
       //menu.choicerGM(true) = false;
     }
-    leveltimer--;
+    if (levelClear == false)
+    {
+      leveltimer--;
+    }
     gamemode = menu.choicerGM(gamemode);
     //Common Rendering: BG
     background(24, 2, 44);
@@ -101,8 +138,9 @@ class TopLogic
     }
     if (menu.choicerGM(gamemode) == true)
     {
+      title.stop();
       //Level-Specific calls
-      if (menu.choicerLevel(levelID) == 1)
+      if (levelID == 1)
       {
 
         translate((-xCam)*3, (-yCam)*3);
@@ -113,7 +151,7 @@ class TopLogic
         p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
-      if (menu.choicerLevel(levelID) == 2)
+      if (levelID == 2)
       {
 
         translate((-xCam)*3, (-yCam)*3);
@@ -122,7 +160,7 @@ class TopLogic
         p1.Render();
         translate((xCam)*3, (yCam)*3);
       }
-      if (menu.choicerLevel(levelID) == 3)
+      if (levelID == 3)
       {
 
         translate((-xCam)*3, (-yCam)*3);
@@ -132,7 +170,7 @@ class TopLogic
         translate((xCam)*3, (yCam)*3);
       }
       //Common Rendering: HUD
-      hud.levelID = menu.choicerLevel(levelID);
+      hud.levelID = levelID;
       hud.Render();
     }
     if (menu.isDebug == true)

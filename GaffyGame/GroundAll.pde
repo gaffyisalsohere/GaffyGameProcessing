@@ -29,7 +29,7 @@ class GroundAll
       grounds = (Ground[])  append(grounds, g2);
       grounds = (Ground[])  append(grounds, g3);
       grounds = (Ground[])  append(grounds, g4);
-      grounds = (Ground[])  append(grounds, g5);
+      //grounds = (Ground[])  append(grounds, g5);
     }
     if (level == 2)
     {

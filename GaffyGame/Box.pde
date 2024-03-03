@@ -2,7 +2,7 @@ class Box
 {
   GroundAll ground;
   CollisionSolids collide;
-  boolean isGrabbed, smashed, grounded, painful;
+  boolean isGrabbed, smashed, grounded, painful, sound;
   float xPos, yPos, yVelocity, xSpeed, gravity;
   int d, xScale, yScale, Scale, id, testvar;
   Box(float x, float y, int s, int i)
@@ -14,12 +14,14 @@ class Box
     xPos = x;
     yPos = y;
     id = i;
+    smashed = false;
   }
 
 
   void Render()
   {
     d=3;
+
     if (smashed == false)
     {//DRAW A BOX
       noStroke();
@@ -39,6 +41,11 @@ class Box
   }
   void boxLogic()
   {
+    if (smashed == true && sound == false)
+    {
+      shatter.play();
+      sound = true;
+    }
     if (smashed == false)
     {
       gravity = 0.15;
@@ -109,10 +116,12 @@ class Box
         if (t.p1.keya == true)
         {
           xSpeed = -2;
+          yVelocity = -0.5;
         }
         if (t.p1.keyd == true)
         {
           xSpeed = 2;
+          yVelocity = -0.5;
         }
         if (t.p1.keyw == true)
         {
@@ -124,7 +133,7 @@ class Box
         yPos = t.p1.grabY;
       }
     }
-    if (t.menu.choicerLevel(1) == 1)
+    if (t.levelID == 1)
     {
       for (int i = 0; i < t.l1.ground.grounds.length; i++) //collider, modified from player collider;
       {
@@ -153,7 +162,7 @@ class Box
         }
       }
     }
-    if (t.menu.choicerLevel(2) == 2)
+    if (t.levelID == 2)
     {
       for (int i = 0; i < t.l2.ground.grounds.length; i++) //collider, modified from player collider;
       {
@@ -182,7 +191,7 @@ class Box
         }
       }
     }
-    if (t.menu.choicerLevel(3) == 3)
+    if (t.levelID == 3)
     {
       for (int i = 0; i < t.l3.ground.grounds.length; i++) //collider, modified from player collider;
       {

@@ -156,12 +156,20 @@ class Gaffy
     {
       iframe--;
     }
+    if (iframe ==59)
+    {
+      hurt.play();
+    }
     t.p1.hammerUse = hammerUse;
     if (hammerUse == true)
     {
 
       hammerUse = false;
       hammerTime =30;
+    }
+    if (hammerTime == 30)
+    {
+      slam.play();
     }
     if (hammerTime < -30) //hammer attack
     {
@@ -192,6 +200,7 @@ class Gaffy
     hammerTime = t.p1.hammerTime;
     if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives >0) //respawn
     {
+      respawn.play();
       xPos = 64;
       yPos = 384;
       t.hp = 3;
@@ -200,6 +209,13 @@ class Gaffy
     }
     if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives <=0) //game over
     {
+      lv1.stop();
+      lv2.stop();
+      lv3.stop();
+      if (gameover == false)
+      {
+        gameend.play();
+      }
       gameover = true;
       yPos = 1024;
     }
@@ -223,7 +239,7 @@ class Gaffy
       yPos = (yPos - 7 + (yVelocity));
     }
 
-    if (t.gamemode == true && gameover == false)
+    if ((t.gamemode == true && gameover == false) && t.levelClear == false)
     {
       if (keyj == true)
       {
@@ -266,7 +282,7 @@ class Gaffy
       }
       if (keyl == true) //attack; likely debug placement for now
       {
-        if (hammerTime <= 0)
+        if (hammerTime <= -15)
         {
           hammerUse = true;
         }

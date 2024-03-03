@@ -5,12 +5,25 @@
 import processing.sound.*;
 //sfx
 SoundFile jump;
+SoundFile bonk;
+SoundFile coin;
+SoundFile shatter;
+SoundFile slam;
+SoundFile hurt;
+SoundFile oneup;
+SoundFile respawn;
 //mus
 SoundFile title;
+SoundFile lv1;
+SoundFile lv2;
+SoundFile lv3;
+SoundFile gameend;
+SoundFile lclear;
 TopLogic t;
 
 void setup()
 {
+
   //for reference: "d" effects the "grid" objects are put on; all object coordinate and scale grids are divisible by d by design, except when to patch up AA jank.
   //"d" takes this meaning on all subsequent pages, by the way.
   t = new TopLogic();
@@ -18,9 +31,23 @@ void setup()
   frameRate(60);
   noCursor();
   noStroke();
+  //sfx define
   jump = new SoundFile(this, "jump.wav");
+  bonk = new SoundFile(this, "bonk.wav");
+  coin = new SoundFile(this, "coin.wav");
+  shatter = new SoundFile(this, "shatter.wav");
+  slam = new SoundFile(this, "slam.wav");
+  hurt = new SoundFile(this, "hurt.wav");
+  oneup = new SoundFile(this, "1up.mp3");
+  respawn = new SoundFile(this, "respawn.wav");
+  //mus define
   title = new SoundFile(this, "title.mp3");
-  t.vernum = "1.24.03.02";
+  lv1 = new SoundFile(this, "l1.mp3");
+  lv2 = new SoundFile(this, "l2.mp3");
+  lv3 = new SoundFile(this, "l3.mp3");
+  lclear = new SoundFile(this, "lclear.mp3");
+  gameend = new SoundFile(this, "gameover.mp3");
+  t.vernum = "1.24.03.03";
 }
 
 

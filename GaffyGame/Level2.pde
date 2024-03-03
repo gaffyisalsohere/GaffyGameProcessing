@@ -7,7 +7,8 @@ class Level2
   int d;
   Level2()
   {
-        ground = new GroundAll(1);
+
+    ground = new GroundAll(1);
     ground.LevelInit();
     doller = new DollerAll(1);
     doller.LevelInit();
@@ -16,5 +17,9 @@ class Level2
   }
   void Render()
   {
+    if (lv2.isPlaying() == false&& t.levelClear == false)
+    {
+      lv2.play();
+    }
   }
 }

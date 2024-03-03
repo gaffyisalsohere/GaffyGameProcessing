@@ -2,7 +2,7 @@
 class Rat
 {
   Hitbox hitbox;
-  boolean safe;
+  boolean safe, sound;
   float xPos, yPos, lTarget, rTarget, PawHeightA, PawHeightB, speed, yVelocity;
   int stepTimer, d, rotate;
   int dir; //0 and 1 = left and right, respectively. Bool'ing it broke, oh well
@@ -131,8 +131,13 @@ class Rat
     {
       hitbox.Collide();
     }
-    if (hitbox.dead == true)
+    if (hitbox.dead == true || t.levelClear == true)
     {
+      if (sound == false)
+      {
+        bonk.play();
+        sound = true;
+      }
       yVelocity += 0.3;
       yPos = yPos + yVelocity;
     }

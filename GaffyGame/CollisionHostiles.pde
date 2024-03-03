@@ -61,7 +61,7 @@ class Hitbox
           //println("hit!");
         }
       }
-      if (t.menu.choicerLevel(1) == 1)
+      if (t.levelID == 1)
       {
         for (int i = 1; i < t.l1.boxes.boxes.length; i++)
         {
@@ -73,7 +73,7 @@ class Hitbox
           }
         }
       }
-      if (t.menu.choicerLevel(2) == 2)
+      if (t.levelID == 2)
       {
         for (int i = 1; i < t.l2.boxes.boxes.length; i++)
         {
@@ -85,7 +85,7 @@ class Hitbox
           }
         }
       }
-      if (t.menu.choicerLevel(3) == 3)
+      if (t.levelID == 3)
       {
         for (int i = 1; i < t.l3.boxes.boxes.length; i++)
         {
