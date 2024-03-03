@@ -17,10 +17,12 @@ class Menu
     m1 = new MenuPointer(0);
     g1 = new Ground(0, 192, 256, 32);
   }
-
-
   void Render()
   {
+    if (title.isPlaying() == false)
+    {
+      title.play();
+    }
     g1.Render();
 
     m1.Render();

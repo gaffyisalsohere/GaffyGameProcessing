@@ -2,7 +2,13 @@
 //
 //MENU CONTROLS: W and S move cursor, J selects, K backs out of credits
 //GAME CONTROLS: A and D move left and right, J jumps, hold K to hold small boxes, L hammers.
+import processing.sound.*;
+//sfx
+SoundFile jump;
+//mus
+SoundFile title;
 TopLogic t;
+
 void setup()
 {
   //for reference: "d" effects the "grid" objects are put on; all object coordinate and scale grids are divisible by d by design, except when to patch up AA jank.
@@ -12,6 +18,8 @@ void setup()
   frameRate(60);
   noCursor();
   noStroke();
+  jump = new SoundFile(this, "jump.wav");
+  title = new SoundFile(this, "title.mp3");
   t.vernum = "1.24.03.02";
 }
 

@@ -2,7 +2,7 @@ class Gaffy
 {//its me!
   float xPos, yPos, grabX, grabY, xSpeed, ySpeed, gravity, yVelocity, jumpModifier, jumpFlag, tailAngle, hammerHitX, hammerHitY;
   int d, animTimer, dir, grabbingID, hammerTime, score, dollers, leveltimer, health, iframe, hitDir;
-  boolean keyw, keya, keys, keyd, keyj, keyk, keyl, isGrabbing, hammerUse,gameover;
+  boolean keyw, keya, keys, keyd, keyj, keyk, keyl, isGrabbing, hammerUse, gameover, jumpframes;
 
   //for whatever reason including these variables here makes things nicer
   boolean gm; //gamemode handler; false is menu, true is level
@@ -147,6 +147,11 @@ class Gaffy
   }
   void gaffyLogic()
   {
+    if (jumpframes == true)
+    {
+      jump.play();
+      jumpframes = false;
+    }
     if (iframe >0)
     {
       iframe--;
@@ -185,7 +190,7 @@ class Gaffy
     }
     hammerTime --;
     hammerTime = t.p1.hammerTime;
-    if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives >0) //placeholder respawn
+    if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives >0) //respawn
     {
       xPos = 64;
       yPos = 384;
@@ -193,7 +198,7 @@ class Gaffy
       t.lives = t.lives-1;
       t.leveltimer = 23999;
     }
-        if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives <=0) //placeholder respawn
+    if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives <=0) //game over
     {
       gameover = true;
       yPos = 1024;
@@ -213,6 +218,7 @@ class Gaffy
     }
     if (jumpFlag == 0)
     {
+
       jumpModifier=1;
       yPos = (yPos - 7 + (yVelocity));
     }
@@ -221,6 +227,10 @@ class Gaffy
     {
       if (keyj == true)
       {
+        if (jumpFlag ==1)
+        {
+          jumpframes = true;
+        }
         jumpFlag = 0;
       }
       if (keyj == false)
