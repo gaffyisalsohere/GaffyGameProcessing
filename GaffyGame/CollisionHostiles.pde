@@ -21,26 +21,26 @@ class Hitbox
     //rect(xPos*d, yPos*d, xScale*d, yScale*d);
     if (t.p1.iframe == 0) //don't hit again if recovering
     {
-      if (((xPos + xScale) < t.p1.xPos && (xPos +8+ xScale) > t.p1.xPos) && ((yPos - 16 < t.p1.yPos) && (yPos + yScale  >= t.p1.yPos))) //bumped left?
+      if (((xPos + xScale -8) < t.p1.xPos && (xPos +8+ xScale) > t.p1.xPos) && ((yPos - 16 < t.p1.yPos) && (yPos + yScale  >= t.p1.yPos))) //bumped side?
       {
         t.p1.iframe = 60;
 
         t.p1.yPos = t.p1.yPos-1;
-        t.p1.yVelocity = -1;
+        t.p1.yVelocity = -.15;
         t.hp -= 1;
       }
-      if (((xPos-8 < t.p1.xPos && (xPos) > t.p1.xPos) && ((yPos  - 16 < t.p1.yPos) && (yPos + yScale  >= t.p1.yPos)))) //bumped right?
-      {
-        t.p1.iframe = 60;
+      //if (((xPos-8 < t.p1.xPos && (xPos) > t.p1.xPos) && ((yPos  - 16 < t.p1.yPos) && (yPos + yScale  >= t.p1.yPos)))) //bumped right?
+      //{
+      //  t.p1.iframe = 60;
 
-        t.p1.yPos = t.p1.yPos-1;
-        t.p1.yVelocity = -1;
-        t.hp -= 1;
-      }
+      //  t.p1.yPos = t.p1.yPos-1;
+      //  t.p1.yVelocity = -.15;
+      //  t.hp -= 1;
+      //}
     }
     if (dead == false)
     {
-      if (((((yPos-20 < t.p1.yPos && (yPos+yScale) > t.p1.yPos) && ((xPos  - 4 < t.p1.xPos) && (xPos + 4 + xScale >  t.p1.xPos))) && t.p1.jumpFlag == 0)) && safe == true) //jumped on?
+      if (((((yPos-20 < t.p1.yPos && (yPos+yScale) > t.p1.yPos) && ((xPos  - 8 < t.p1.xPos) && (xPos + 8 + xScale >  t.p1.xPos))) && t.p1.jumpFlag == 0)) && safe == true) //jumped on?
       {
         t.p1.yPos = (yPos - 20); //bounce off, kill the enemy
         t.p1.yVelocity = -.3;

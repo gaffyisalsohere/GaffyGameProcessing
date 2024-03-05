@@ -57,7 +57,7 @@ class Menu
       }
       if (isDebug == false);
       {
-        text("GAFFYGAME ALPHA VERSION", 32*d, 32*d);
+        text("GAFFYGAME", 32*d, 32*d);
       }
       text("GAME CODE WRITTEN", 32*d, 48*d);
       text("BY COLBY 'GAFFY' HOCKING", 32*d, 64*d);

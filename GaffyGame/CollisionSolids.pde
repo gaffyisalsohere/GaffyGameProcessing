@@ -30,7 +30,7 @@ class CollisionSolids
       t.p1.yPos = (yPos + yScale + 14); //stop, *and* properly reset jumps
       t.p1.yVelocity = 3;
     }
-    if (((yPos-20 < t.p1.yPos && (yPos + yScale+4) > t.p1.yPos) && ((xPos  - 4 < t.p1.xPos) && (xPos + 4 + xScale >  t.p1.xPos)))) //hit floor?
+    if (((yPos-20 < t.p1.yPos && (yPos + yScale-4) > t.p1.yPos) && ((xPos  - 4 < t.p1.xPos) && (xPos + 4 + xScale >  t.p1.xPos)))) //hit floor?
     {
       t.p1.yPos = (yPos - 20); //stop, *and* properly reset jumps
       t.p1.yVelocity = 0;

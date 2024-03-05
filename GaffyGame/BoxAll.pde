@@ -12,7 +12,7 @@ class BoxAll
     b2 = new Box (80, 432, 1, 2);
     b3 = new Box (128, 432, 1, 3);
 
-    b4 = new Box(578, 360, 4, 4);;
+    b4 = new Box(592, 360, 4, 4);;
   }
   void LevelInit()
   { //arrayify box for collision

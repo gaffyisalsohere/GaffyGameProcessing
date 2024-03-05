@@ -20,9 +20,9 @@ class Level1
     boxes = new BoxAll(1);
     boxes.LevelInit();
     rat1 = new Rat(224*d, 384*d, 0, 192*d, 288*d, 0.8);
-    rat2 = new Rat(64*d, 416*d, 0, -64*d, 48*d, 1.2);
-    mad1 = new MadRat(512*d, 384*d, 0, 512*d, 640*d, 0.8);
-    bus = new BusStop(768, 304)
+    rat2 = new Rat(512*d, 304*d, 0, 512*d, (592)*d, 1.2);
+    mad1 = new MadRat(688*d, 432*d, 0, 688*d, 944*d, 0.8);
+    bus = new BusStop(768+128, 352)
       ;
   }
   void Render()
@@ -44,8 +44,8 @@ class Level1
     ground.Render();
     doller.Render();
     rat1.Render();
-    //rat2.Render();
-    //mad1.Render();
+    rat2.Render();
+    mad1.Render();
     boxes.Render();
   }
 }

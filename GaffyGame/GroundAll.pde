@@ -1,7 +1,7 @@
 class GroundAll
 {
   Ground[] grounds;
-  Ground g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16;
+  Ground g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40;
   int level;
   GroundAll(int l)
   {
@@ -12,9 +12,13 @@ class GroundAll
     g3 = new Ground(-48, 416, 128, 192);
     g4 = new Ground(368, 384, 32, 128);
     g5 = new Ground(400, 336, 64, 144);
-    g6 = new Ground(416, 304, 144, 128);
-    g7 = new Ground(672, 192, 128, 192);
-    g8 = new Ground(656, 384, 16, 64);
+    g6 = new Ground(464, 304, 144, 256);
+    g7 = new Ground(688, 192, 128, 192);
+    g8 = new Ground(608, 384, 16, 64);
+    g9 = new Ground(608, 304, 16, 192);
+    g10 = new Ground(624, 448, 64, 32);
+    g11 = new Ground(688, 432, 384, 64);
+    //1-2 grounds
   }
   void LevelInit()
   { //arrayify ground for collision
@@ -33,9 +37,9 @@ class GroundAll
       grounds = (Ground[])  append(grounds, g6);
       grounds = (Ground[])  append(grounds, g7);
       grounds = (Ground[])  append(grounds, g8);
-      //grounds = (Ground[])  append(grounds, g9);
-      //grounds = (Ground[])  append(grounds, g10);
-      //grounds = (Ground[])  append(grounds, g11);
+      grounds = (Ground[])  append(grounds, g9);
+      grounds = (Ground[])  append(grounds, g10);
+      grounds = (Ground[])  append(grounds, g11);
       //grounds = (Ground[])  append(grounds, g12);
       //grounds = (Ground[])  append(grounds, g13);
       //grounds = (Ground[])  append(grounds, g14);

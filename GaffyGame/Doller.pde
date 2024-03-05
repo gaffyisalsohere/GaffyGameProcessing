@@ -17,11 +17,11 @@ class Doller
     {
 
       fill(150);
-      ellipse(xPos*d, yPos*d, spinValue*16*d, 16*d);
+      ellipse((xPos+8)*d, (yPos+8)*d, spinValue*16*d, 16*d);
       fill(90);
-      ellipse((xPos)*d, (yPos)*d, spinValue*14*d, 14*d);
+      ellipse((xPos+8)*d, (yPos+8)*d, spinValue*14*d, 14*d);
       fill(150);
-      ellipse((xPos)*d, (yPos)*d, spinValue*12*d, 12*d);
+      ellipse((xPos+8)*d, (yPos+8)*d, spinValue*12*d, 12*d);
 
       if (spinValue >=0.25 && extreme == true)
       {
