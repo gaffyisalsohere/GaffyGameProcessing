@@ -64,7 +64,7 @@ class Box
       {
         if ((xPos > t.boulder.xPos-(16*Scale*2)) && ((xPos+(Scale*16) < t.boulder.xPos+(16*Scale*2))))
         {
-          if (yPos > t.boulder.yPos -(16*Scale*2) && (yPos+(Scale*16) < t.boulder.yPos+(16*Scale*2)-4))
+          if (yPos > t.boulder.yPos -(16*Scale) && (yPos+(Scale*16) < t.boulder.yPos+(16*Scale)-4))
           {
             smashed = true;
             t.score += 50;
@@ -77,7 +77,7 @@ class Box
       {
         if ((xPos > t.p1.hammerHitX-(16*Scale*2)) && ((xPos+(Scale*16) < t.p1.hammerHitX+(16*Scale*2))))
         {
-          if (yPos > t.p1.hammerHitY -(16*Scale*2) && (yPos+(Scale*16) < t.p1.hammerHitY+(16*Scale*2)))
+          if (yPos > t.p1.hammerHitY -(16*Scale)-4 && (yPos+(Scale*16) < t.p1.hammerHitY+(16*Scale)+4))
           {
             smashed = true;
             t.score += 50;
@@ -144,7 +144,7 @@ class Box
         }
         if (((t.l1.ground.grounds[i].xPos-(16*Scale) < xPos && (t.l1.ground.grounds[i].xPos) > xPos) && ((t.l1.ground.grounds[i].yPos  - (16*Scale) < yPos) && (t.l1.ground.grounds[i].yPos + t.l1.ground.grounds[i].yScale  >= yPos)))) //hit a right wall?
         {
-          xPos = (t.l1.ground.grounds[i].xPos -(16*Scale));
+          xPos = (t.l1.ground.grounds[i].xPos -(16*Scale) -16);
           xSpeed = 0;//stop
         }
         if ((((t.l1.ground.grounds[i].yPos) < yPos && (t.l1.ground.grounds[i].yPos + t.l1.ground.grounds[i].yScale+16) > yPos) && ((t.l1.ground.grounds[i].xPos < xPos) && (t.l1.ground.grounds[i].xPos + xScale > xPos)))) //hit ceiling?

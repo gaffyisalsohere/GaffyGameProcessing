@@ -12,7 +12,7 @@ class BoxAll
     b2 = new Box (80, 432, 1, 2);
     b3 = new Box (128, 432, 1, 3);
 
-    b4 = new Box(384, 368, 896, 32);
+    b4 = new Box(578, 360, 4, 4);;
   }
   void LevelInit()
   { //arrayify box for collision
@@ -23,7 +23,7 @@ class BoxAll
     }
     if (level == 1)
     {
-      boxes = (Box[])  append(boxes, b1);
+      boxes = (Box[])  append(boxes, b1); //l1 boxes
       boxes = (Box[])  append(boxes, b2);
       boxes = (Box[])  append(boxes, b3);
       boxes = (Box[])  append(boxes, b4);

@@ -24,7 +24,7 @@ class TopLogic
     menu = new Menu();
 
     p1 = new Gaffy(64, 384, 0, 90, 3);
-    boulder = new Boulder(448, 384);
+    boulder = new Boulder(496, 304);
     l1 = new Level1();
     l2 = new Level2();
     l3 = new Level3();
@@ -37,7 +37,7 @@ class TopLogic
   void GameLoop()
   {
     text(vernum, 1024, 1024);
-    println((levelID));
+    //println((levelID));
     if (levelClear == true && clearTimer >= 0)
     {
       if (tallyDone == false)

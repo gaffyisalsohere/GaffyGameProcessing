@@ -45,7 +45,7 @@ class Level1
     doller.Render();
     rat1.Render();
     //rat2.Render();
-    mad1.Render();
+    //mad1.Render();
     boxes.Render();
   }
 }
