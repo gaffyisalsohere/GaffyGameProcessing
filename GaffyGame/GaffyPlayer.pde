@@ -1,6 +1,6 @@
 class Gaffy
 {//its me!
-  float xPos, yPos, grabX, grabY, xSpeed, ySpeed, gravity, yVelocity, jumpModifier, jumpFlag, tailAngle, hammerHitX, hammerHitY;
+  float xPos, yPos, grabX, grabY, xSpeed, ySpeed, gravity, yVelocity, jumpModifier, jumpFlag, tailAngle, hammerHitX, hammerHitY, spawnX, spawnY;
   int d, animTimer, dir, grabbingID, hammerTime, score, dollers, leveltimer, health, iframe, hitDir;
   boolean keyw, keya, keys, keyd, keyj, keyk, keyl, isGrabbing, hammerUse, gameover, jumpframes;
 
@@ -201,8 +201,8 @@ class Gaffy
     if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives >0) //respawn
     {
       respawn.play();
-      xPos = 64;
-      yPos = 384;
+      xPos = spawnX;
+      yPos = spawnY;
       t.hp = 3;
       t.lives = t.lives-1;
       t.leveltimer = 23999;
@@ -252,7 +252,7 @@ class Gaffy
       if (keyj == false)
       {
       }
-      if (keya == true)
+      if (keya == true && hammerTime  <=0)
       {
         dir = 0;
         xPos -=1.5;
@@ -261,7 +261,7 @@ class Gaffy
       {
         xPos +=0;
       }
-      if (keyd == true)
+      if (keyd == true && hammerTime  <=0)
       {
         dir = 1;
         xPos +=1.5;
@@ -298,14 +298,6 @@ class Gaffy
       {
         xPos = 1012;
       }
-    }
-    if (hitDir == 1 && iframe >0)
-    {
-      xSpeed = -0.5;
-    }
-    if (hitDir == 1 && iframe >0)
-    {
-      xSpeed = 0.5;
     }
   }
   void keyStart(char k)

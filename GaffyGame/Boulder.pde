@@ -23,7 +23,7 @@ class Boulder
     ellipse(xPos*d, (yPos-24)*d, 48*d, 48*d);
     if (t.p1.hammerTime > 0 && t.p1.dir == 0)
     {
-      if ((xPos > t.p1.hammerHitX-(96)) && ((xPos+(48) < t.p1.hammerHitX+(96))))
+      if ((xPos > t.p1.hammerHitX-(48)) && ((xPos+(48) < t.p1.hammerHitX+(96))))
       {
         if (yPos-24 > t.p1.hammerHitY -(96) && (yPos+(24) < t.p1.hammerHitY+(96)))
         {
@@ -35,7 +35,7 @@ class Boulder
     }
     if (t.p1.hammerTime > 0 && t.p1.dir == 1)
     {
-      if ((xPos > t.p1.hammerHitX-(96)) && ((xPos+(48) < t.p1.hammerHitX+(96))))
+      if ((xPos > t.p1.hammerHitX-(24)) && ((xPos+(48) < t.p1.hammerHitX+(96))))
       {
         if (yPos-24 > t.p1.hammerHitY -(96) && (yPos+(24) < t.p1.hammerHitY+(96)))
         {

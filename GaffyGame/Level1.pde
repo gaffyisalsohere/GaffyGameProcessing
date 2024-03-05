@@ -12,7 +12,7 @@ class Level1
   Level1()
   {
     d = 3;
- 
+
     ground = new GroundAll(1);
     ground.LevelInit();
     doller = new DollerAll(1);
@@ -33,8 +33,10 @@ class Level1
     }
     if (levelInit == false)
     {
+      t.p1.spawnX = 64;
+      t.p1.spawnY = 384;
       t.p1.xPos = 48;
-      t.p1.yPos = 416;
+      t.p1.yPos = 384;
       levelInit = true;
     }
 
