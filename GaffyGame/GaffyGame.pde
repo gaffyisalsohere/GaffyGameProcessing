@@ -23,10 +23,8 @@ TopLogic t;
 
 void setup()
 {
-
-  //for reference: "d" effects the "grid" objects are put on; all object coordinate and scale grids are divisible by d by design, except when to patch up AA jank.
-  //"d" takes this meaning on all subsequent pages, by the way.
   t = new TopLogic();
+  t.vernum = "1.24.03.04";
   size(768, 672); //256*224, 3x upscale. my game is heavily influenced by SNES
   frameRate(60);
   noCursor();
@@ -47,7 +45,6 @@ void setup()
   lv3 = new SoundFile(this, "l3.mp3");
   lclear = new SoundFile(this, "lclear.mp3");
   gameend = new SoundFile(this, "gameover.mp3");
-  t.vernum = "1.24.03.03";
 }
 
 
