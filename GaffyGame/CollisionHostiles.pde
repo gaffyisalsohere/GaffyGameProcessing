@@ -34,7 +34,7 @@ class Hitbox
         }
 
 
-        if ((t.p1.hammerTime>0) && ((yPos-20 < t.p1.hammerHitY && (yPos+yScale) > t.p1.hammerHitY) && (xPos  - 16*d < t.p1.hammerHitX) && (xPos + xScale >  t.p1.hammerHitX)))
+        if ((t.p1.hammerTime>0) && ((yPos-20 < t.p1.hammerHitY && (yPos+yScale) > t.p1.hammerHitY) && (xPos  - 24 < t.p1.hammerHitX) && (xPos + xScale +12 >  t.p1.hammerHitX)))
         {
           dead = true;
           t.score += 100;

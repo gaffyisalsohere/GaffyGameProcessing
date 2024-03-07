@@ -19,12 +19,12 @@ class Level2
     ground.LevelInit();
     doller.LevelInit();
     boxes.LevelInit();
-    rat1 = new Rat(224*d, 384*d, 0, 192*d, 288*d, 0.8);
-    rat2 = new Rat(176*d, 256*d, 0, 192*d, 320*d, 1.2);
+    rat1 = new Rat(352*d, 224*d, 0, 352*d, 480*d, 0.8);
+    rat2 = new Rat(320*d, 256*d, 0, 192*d, 320*d, 1.2);
     mad1 = new MadRat(176*d, 256*d, 0, 192*d, 320*d, 0.8);
-    mad2 = new MadRat(512*d, 272*d, 0, 496*d, 576*d, 0.8);
-    bus = new BusStop(768+128, 352);
-    //    g17 = new Ground(480, 272, 112, 256);
+    mad2 = new MadRat(608*d, 272*d, 0, 608*d, 720*d, 0.8);
+    bus = new BusStop(896, 176);
+    //        g16 = new Ground(352, 224, 128, 320);
   }
   void Render()
   {

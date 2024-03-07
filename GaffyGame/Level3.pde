@@ -4,7 +4,7 @@ class Level3
   DollerAll doller;
   BoxAll boxes;
   Rat rat1, rat2;
-  MadRat mad1;
+  MadRat mad1, mad2;
   BusStop bus;
   int d, timestart;
   boolean levelInit, clear;
@@ -16,21 +16,14 @@ class Level3
     doller = new DollerAll(3);
 
     boxes = new BoxAll(3);
-    //for (int i = 0; i < ground.grounds.length; i++)
-    //{
-    //  ground.grounds[i].yPos = ground.grounds[i].yPos - 512;
-    //}
-    //for (int i = 0; i < boxes.boxes.length; i++)
-    //{
-    //  boxes.boxes[i].yPos = boxes.boxes[i].yPos - 512;
-    //}
-    //for (int i = 0; i < ground.grounds.length; i++)
-    //{
-    //  doller.dollers[i].yPos = doller.dollers[i].yPos - 512;
-    //}
     ground.LevelInit();
     doller.LevelInit();
     boxes.LevelInit();
+    rat1 = new Rat(352*d, 224*d, 0, 352*d, 480*d, 0.8);
+    rat2 = new Rat(176*d, 256*d, 0, 192*d, 320*d, 1.2);
+    mad1 = new MadRat(176*d, 256*d, 0, 192*d, 320*d, 0.8);
+    mad2 = new MadRat(608*d, 272*d, 0, 608*d, 720*d, 0.8);
+    bus = new BusStop(896, 224);
   }
   void Render()
   {

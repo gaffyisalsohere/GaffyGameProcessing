@@ -10,7 +10,7 @@ class TopLogic
   Boulder boulder;
   String vernum, patch;
   int levelID, d, leveltimer, score, dollers, lives, hp, endTimer, scoreBonus, clearTimer;
-  boolean gamemode, levelClear, tallyDone, init, debug;
+  boolean gamemode, levelClear, tallyDone, init, debug, hprecover;
   float xCam, yCam;
   TopLogic()
   { //define objects in TopLogic's Domain.
@@ -77,6 +77,19 @@ class TopLogic
           levelID = 2;
         }
       }
+    }
+    if (dollers % 5 == 0 && hprecover == false)
+    {
+      hp ++;
+      hprecover = true;
+    }
+        if (dollers % 5 == 1)
+    {
+      hprecover = false;
+    }
+        if (hp > 3)
+    {
+      hp = 3;
     }
     if (dollers >= 15)
     {
