@@ -128,6 +128,11 @@ class Box
           yVelocity = -5;
           xSpeed = 0;
         }
+        if (t.p1.keys == true)
+        {
+          yVelocity = 0;
+          xSpeed = 0;
+        }
         id = t.p1.grabbingID;
         xPos = t.p1.grabX;
         yPos = t.p1.grabY;

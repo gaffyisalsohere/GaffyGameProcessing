@@ -78,11 +78,11 @@ class TopLogic
         }
       }
     }
-    if (dollers >= 20)
+    if (dollers >= 15)
     {
       oneup.play();
       lives++;
-      dollers = 0;
+      dollers -= 15;
     }
     if (t.p1.gameover == true)
     {

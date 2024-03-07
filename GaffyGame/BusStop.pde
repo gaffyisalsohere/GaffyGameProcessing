@@ -19,7 +19,7 @@ class BusStop
     circle((xPos+8)*d, (yPos-16)*d, 16*d);
     fill(#fcc900);
     arc((xPos+8)*d, (yPos-16)*d, 16*d, 16*d, 0.25, (PI-0.25), CHORD);
-    if ((t.p1.xPos > xPos+6) && (t.p1.yPos > yPos))
+    if ((t.p1.xPos > xPos+6) && (t.p1.yPos > yPos-32))
     {
       if (t.levelClear == false)
       {

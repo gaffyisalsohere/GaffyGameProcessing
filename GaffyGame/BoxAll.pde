@@ -1,7 +1,7 @@
 class BoxAll
 {
   Box[] boxes;
-  Box b1, b2, b3, b4;
+  Box b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20;
   int level;
   BoxAll(int l)
   {
@@ -11,8 +11,8 @@ class BoxAll
     b1 = new Box (160, 416, 2, 1); //1-1 boxes
     b2 = new Box (80, 432, 1, 2);
     b3 = new Box (128, 432, 1, 3);
-
-    b4 = new Box(592, 360, 4, 4);;
+    b4 = new Box(592, 360, 4, 4);
+    b5 = new Box(160, 240, 2, 5);
   }
   void LevelInit()
   { //arrayify box for collision
@@ -30,6 +30,7 @@ class BoxAll
     }
     if (level == 2)
     {
+      boxes = (Box[])  append(boxes, b5);
     }
     if (level == 3)
     {

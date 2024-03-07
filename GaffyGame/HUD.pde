@@ -12,7 +12,7 @@ class HUD
   {
     {
       d = 3; //everything is *3 in this image to emulate snes 256x224 resolution.
-      fill(#9b6b16); //HUD, work in progress
+      fill(#9b6b16); //HUD
       rect(0*d, 0*d, 256*d, 48*d);
       fill(#e1ae3f);
       rect(1*d, 1*d, 254*d, 46*d);
@@ -32,10 +32,40 @@ class HUD
       circle(40*d, 12*d, 4*d);
       fill(#c61b00);//a
       circle(44*d, 16*d, 4*d);
-
-      fill(90);
+      fill(90); //dpad
       rect(15*d, 14*d, 10*d, 4*d);
       rect(18*d, 11*d, 4*d, 10*d);
+      fill(192);
+      if (t.p1.keya == true)
+      {
+        rect(15*d, 14*d, 4*d, 4*d);
+      }
+      if (t.p1.keyw == true)
+      {
+        rect(18*d, 11*d, 4*d, 4*d);
+      }
+      if (t.p1.keyd == true)
+      {
+        rect(21*d, 14*d, 4*d, 4*d);
+      }
+      if (t.p1.keys == true)
+      {
+        rect(18*d, 17*d, 4*d, 4*d);
+      }
+      fill(255, 127);
+      if (t.p1.keyj == true)
+      {
+        circle(40*d, 20*d, 4*d);
+      }
+      if (t.p1.keyk == true)
+      {
+        circle(36*d, 16*d, 4*d);
+      }
+      if (t.p1.keyl == true)
+      {
+        circle(40*d, 12*d, 4*d);
+      }
+
       fill (150);
       circle(20*d, 32*d, 16*d); //dollers (intentional spelling) count
       fill(90);
