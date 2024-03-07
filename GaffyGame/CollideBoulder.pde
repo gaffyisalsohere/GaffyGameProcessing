@@ -21,13 +21,13 @@ class CollideBoulder
     {
       t.boulder.xPos = (xPos + xScale+24); //stop
       t.boulder.xVelocity = 0;
-
+      t.boulder.rolling = 0;
     }
     if (((xPos-24 < t.boulder.xPos && (xPos) > t.boulder.xPos) && ((yPos +4< t.boulder.yPos) && (yPos + yScale  >= t.boulder.yPos)))) //hit a right wall?
     {
       t.boulder.xPos = (xPos -24); //stop
       t.boulder.xVelocity = 0;
-
+      t.boulder.rolling = 0;
     }
     if (((yPos < t.boulder.yPos && (yPos + yScale+4) > t.boulder.yPos) && ((xPos  - 4 < t.boulder.xPos) && (xPos + 4 + xScale >  t.boulder.xPos)))) //hit floor?
     {

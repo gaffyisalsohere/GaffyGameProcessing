@@ -13,11 +13,11 @@ class Level2
   {
     d = 3;
 
-    ground = new GroundAll(1);
+    ground = new GroundAll(2);
 
-    doller = new DollerAll(1);
+    doller = new DollerAll(2);
 
-    boxes = new BoxAll(1);
+    boxes = new BoxAll(2);
     //for (int i = 0; i < ground.grounds.length; i++)
     //{
     //  ground.grounds[i].yPos = ground.grounds[i].yPos - 512;

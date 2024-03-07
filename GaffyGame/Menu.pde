@@ -33,11 +33,11 @@ class Menu
     if (isCredits == false)
     {
       text("PRESS J TO SELECT", 64*d, 112*d);
-      if (isDebug == false)
+      if (t.debug == false)
       {
         text("START GAME", 80*d, 128*d);
       }
-      if (isDebug == true)
+      if (t.debug == true)
       {
         text("DEBUG 1-1", 80*d, 128*d);
         text("DEBUG 1-2", 80*d, 144*d);
@@ -51,14 +51,15 @@ class Menu
       rect(24*d, 24*d, 212*d, 188*d, 50);
       fill(255);
       textAlign(LEFT, TOP);
-      if (isDebug == true);
+      if (t.debug != true)
+      {
+        text("GAFFYGAME ALPHA" + t.patch, 32*d, 32*d);
+      }
+      if (t.debug == true)
       {
         text("GAFFYGAME v" + t.vernum, 32*d, 32*d);
       }
-      if (isDebug == false);
-      {
-        text("GAFFYGAME", 32*d, 32*d);
-      }
+
       text("GAME CODE WRITTEN", 32*d, 48*d);
       text("BY COLBY 'GAFFY' HOCKING", 32*d, 64*d);
       text("FONTS ARE PENGO ARCADE", 32*d, 80*d);
@@ -68,7 +69,7 @@ class Menu
 
       text("FOR HELP GETTING TO", 32*d, 144*d);
 
-      text("1.x.x.x BUILD", 32*d, 160*d);
+      text("1.x BUILD", 32*d, 160*d);
       text("PRESS K TO RETURN", 32*d, 192*d);
     }
     //Title
@@ -139,7 +140,7 @@ class Menu
     {
       m1.choice = 3;
     }
-    if (isDebug == false) //if not debug mode, skip the debug options
+    if (t.debug == false) //if not debug mode, skip the debug options
     {
       if (m1.choice == 1)
       {
@@ -175,14 +176,11 @@ class Menu
     if (selection == true && m1.choice == 1)
     {
       t.levelID = 2;
-
     }
     if (selection == true && m1.choice == 2)
     {
       t.levelID = 3;
-
     }
-
   }
   boolean choicerGM(boolean gamemode)
   {

@@ -25,6 +25,7 @@ void setup()
 {
   t = new TopLogic();
   t.vernum = "1.24.03.07";
+  t.patch = "1.0";
   size(768, 672); //256*224, 3x upscale. my game is heavily influenced by SNES
   frameRate(60);
   noCursor();

@@ -8,12 +8,13 @@ class TopLogic
   Level3 l3;
   Gaffy p1;
   Boulder boulder;
-  String vernum;
+  String vernum, patch;
   int levelID, d, leveltimer, score, dollers, lives, hp, endTimer, scoreBonus, clearTimer;
-  boolean gamemode, levelClear, tallyDone, init;
+  boolean gamemode, levelClear, tallyDone, init, debug;
   float xCam, yCam;
   TopLogic()
   { //define objects in TopLogic's Domain.
+    debug = true;
     d = 3;
     manyClouds = new Cloud[6];
     for (int i = 0; i<manyClouds.length; i+=1)
@@ -181,7 +182,7 @@ class TopLogic
       hud.levelID = levelID;
       hud.Render();
     }
-    if (menu.isDebug == true)
+    if (debug == true)
     {
       textAlign(LEFT, TOP);
       fill(255);

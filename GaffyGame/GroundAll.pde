@@ -18,7 +18,8 @@ class GroundAll
     g9 = new Ground(608, 304, 16, 192);
     g10 = new Ground(624, 448, 64, 32);
     g11 = new Ground(688, 432, 384, 64);
-    g12 = new Ground(0, 64, 384, 64);//1-2 grounds
+    
+    g12 = new Ground(0, 96, 64, 384);//1-2 grounds
   }
   void LevelInit()
   { //arrayify ground for collision
@@ -27,6 +28,7 @@ class GroundAll
     {
       grounds[i] = new Ground(-128, -128, 16, 16);
     }
+
     if (level == 1)
     {
       grounds = (Ground[])  append(grounds, g1);
@@ -43,7 +45,7 @@ class GroundAll
     }
     if (level == 2)
     {
-      //grounds = (Ground[])  append(grounds, g12);
+      grounds = (Ground[])  append(grounds, g12);
       //grounds = (Ground[])  append(grounds, g13);
       //grounds = (Ground[])  append(grounds, g14);
       //grounds = (Ground[])  append(grounds, g15);

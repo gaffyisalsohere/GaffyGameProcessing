@@ -22,7 +22,7 @@ class DollerAll
     d13= new Doller(640, 368);
     d14= new Doller(656, 384);
     d15= new Doller(640, 400);
-    d16= new Doller(656, 416);
+    d16= new Doller(656, 320);
   }
   void LevelInit()
   { //arrayify doller for convenience
