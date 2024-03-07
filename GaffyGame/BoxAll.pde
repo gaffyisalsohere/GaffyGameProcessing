@@ -13,6 +13,10 @@ class BoxAll
     b3 = new Box (128, 432, 1, 3);
     b4 = new Box(592, 360, 4, 4);
     b5 = new Box(160, 240, 2, 5);
+    b6 = new Box(448, 400, 1, 6);
+    b7 = new Box(656, 352, 1, 7);
+    b8 = new Box(864, 256, 1, 8);
+    b9 = new Box(96, 416, 1, 9);
   }
   void LevelInit()
   { //arrayify box for collision
@@ -34,6 +38,10 @@ class BoxAll
     }
     if (level == 3)
     {
+      boxes = (Box[])  append(boxes, b6);
+      boxes = (Box[])  append(boxes, b7);
+      boxes = (Box[])  append(boxes, b8);
+      boxes = (Box[])  append(boxes, b9);
     }
   }
   void Render()

@@ -3,26 +3,26 @@ class Level3
   GroundAll ground;
   DollerAll doller;
   BoxAll boxes;
-  Rat rat1, rat2;
-  MadRat mad1, mad2;
+
+  MadRat mad1, mad2, mad3, mad4, mad5;
   BusStop bus;
   int d, timestart;
   boolean levelInit, clear;
 
   Level3()
   {
+    d = 3;
     ground = new GroundAll(3);
-
     doller = new DollerAll(3);
-
     boxes = new BoxAll(3);
     ground.LevelInit();
     doller.LevelInit();
     boxes.LevelInit();
-    rat1 = new Rat(352*d, 224*d, 0, 352*d, 480*d, 0.8);
-    rat2 = new Rat(176*d, 256*d, 0, 192*d, 320*d, 1.2);
-    mad1 = new MadRat(176*d, 256*d, 0, 192*d, 320*d, 0.8);
-    mad2 = new MadRat(608*d, 272*d, 0, 608*d, 720*d, 0.8);
+    mad1 = new MadRat(224*d, 416*d, 0, 192*d, 288*d, 1.5);
+    mad2 = new MadRat(64*d, 384*d, 0, -64*d, 48*d, 1.5);
+    mad3 = new MadRat(400*d, 400*d, 0, 400*d, 528*d, 1.5);
+    mad4 = new MadRat(608*d, 352*d, 0, 608*d, 736*d, 1.5);
+    mad5 = new MadRat(816*d, 304*d, 0, 816*d, 944*d, 1.5);
     bus = new BusStop(896, 224);
   }
   void Render()
@@ -33,10 +33,10 @@ class Level3
     }
     if (levelInit == false)
     {
-      t.p1.spawnX = 64;
-      t.p1.spawnY = 384;
-      t.p1.xPos = 48;
-      t.p1.yPos = 384;
+      t.p1.spawnX = 128;
+      t.p1.spawnY = 416;
+      t.p1.xPos = 128;
+      t.p1.yPos = 416;
       t.levelClear = false;
       t.tallyDone = false;
       t.clearTimer = 180;
@@ -46,9 +46,13 @@ class Level3
     bus.Render();
     ground.Render();
     doller.Render();
-    rat1.Render();
-    rat2.Render();
     mad1.Render();
+    mad2.Render();
+    mad3.Render();
+    mad4.Render();
+    mad5.Render();
+
+
     boxes.Render();
   }
 }

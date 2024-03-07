@@ -40,6 +40,23 @@ class DollerAll
     d30 = new Doller(592, 224);
     d31 = new Doller(752, 208);
     d32 = new Doller(720, 208);
+
+    d33 = new Doller(448, 352); //1-3 dollers
+    d34 = new Doller(448, 336);
+    d35 = new Doller(448, 320);
+    d36 = new Doller(432, 320);
+    d37 = new Doller(464, 320);
+    d38 = new Doller(640, 320);
+    d39 = new Doller(640, 304);
+    d40 = new Doller(640, 288);
+    d41 = new Doller(656, 304);
+    d42 = new Doller(672, 320);
+    d43 = new Doller(672, 304);
+    d44 = new Doller(848, 272);
+    d45 = new Doller(880, 272);
+    d46 = new Doller(864, 256);
+    d47 = new Doller(848, 240);
+    d48 = new Doller(880, 240);
   }
   void LevelInit()
   { //arrayify doller for convenience
@@ -88,6 +105,23 @@ class DollerAll
     }
     if (level == 3)
     {
+
+      dollers = (Doller[])  append(dollers, d33);
+      dollers = (Doller[])  append(dollers, d34);
+      dollers = (Doller[])  append(dollers, d35);
+      dollers = (Doller[])  append(dollers, d36);
+      dollers = (Doller[])  append(dollers, d37);
+      dollers = (Doller[])  append(dollers, d38);
+      dollers = (Doller[])  append(dollers, d39);
+      dollers = (Doller[])  append(dollers, d40);
+      dollers = (Doller[])  append(dollers, d41);
+      dollers = (Doller[])  append(dollers, d42);
+      dollers = (Doller[])  append(dollers, d43);
+      dollers = (Doller[])  append(dollers, d44);
+      dollers = (Doller[])  append(dollers, d45);
+      dollers = (Doller[])  append(dollers, d46);
+      dollers = (Doller[])  append(dollers, d47);
+      dollers = (Doller[])  append(dollers, d48);
     }
   }
   void Render()
