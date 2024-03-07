@@ -11,7 +11,18 @@ class Level3
 
   Level3()
   {
-
+    for (int i = 0; i < ground.grounds.length; i++)
+    {
+      ground.grounds[i].yPos = ground.grounds[i].yPos - 512;
+    }
+    for (int i = 0; i < boxes.boxes.length; i++)
+    {
+      boxes.boxes[i].yPos = boxes.boxes[i].yPos - 512;
+    }
+    for (int i = 0; i < ground.grounds.length; i++)
+    {
+      doller.dollers[i].yPos = doller.dollers[i].yPos - 512;
+    }
     clear = false;
     ground = new GroundAll(1);
     ground.LevelInit();
@@ -32,18 +43,7 @@ class Level3
       t.p1.spawnY = 384;
       t.p1.xPos = 48;
       t.p1.yPos = 384;
-      for (int i = 0; i < ground.grounds.length; i++)
-      {
-        ground.grounds[i].yPos = ground.grounds[i].yPos - 512;
-      }
-      for (int i = 0; i < boxes.boxes.length; i++)
-      {
-        boxes.boxes[i].yPos = boxes.boxes[i].yPos - 512;
-      }
-      for (int i = 0; i < ground.grounds.length; i++)
-      {
-        doller.dollers[i].yPos = doller.dollers[i].yPos - 512;
-      }
+
       levelInit = true;
     }
 
