@@ -20,10 +20,23 @@ class HUD
       rect(4*d, 4*d, 248*d, 40*d);
 
       //icons
-      fill (150);     //controller, used for score
+      fill (150);     //controller, used for score & input display
       rect(21*d, 8*d, 18*d, 12*d);
       ellipse(20*d, 16*d, 14*d, 16*d);
       ellipse(40*d, 16*d, 14*d, 16*d);
+      fill(#01cd00); //y
+      circle(36*d, 16*d, 4*d);
+      fill(#fcc900);//b
+      circle(40*d, 20*d, 4*d);
+      fill(#24459c); //x
+      circle(40*d, 12*d, 4*d);
+      fill(#c61b00);//a
+      circle(44*d, 16*d, 4*d);
+
+      fill(90);
+      rect(15*d, 14*d, 10*d, 4*d);
+      rect(18*d, 11*d, 4*d, 10*d);
+      fill (150);
       circle(20*d, 32*d, 16*d); //dollers (intentional spelling) count
       fill(90);
       circle(20*d, 32*d, 14*d);

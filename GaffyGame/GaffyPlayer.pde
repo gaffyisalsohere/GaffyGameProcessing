@@ -205,7 +205,7 @@ class Gaffy
       yPos = spawnY;
       t.hp = 3;
       t.lives = t.lives-1;
-      t.leveltimer = 23999;
+      t.leveltimer = 11999;
     }
     if ((yPos  >= 528 || t.leveltimer < 0 || t.hp <= 0) && t.lives <=0) //game over
     {

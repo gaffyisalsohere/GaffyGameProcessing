@@ -31,7 +31,7 @@ class TopLogic
     l3 = new Level3();
     lives = 3;
     hp = 3;
-    leveltimer = 23999;
+    leveltimer = 11999;
     menu.isDebug=true; //debug flag! set to true for debug mode (a full level select and fps meter)
     endTimer = 300;
   }
@@ -131,7 +131,7 @@ class TopLogic
     //Level and Gamemode Logic
     if (menu.choicerGM(gamemode) == false)
     {
-      leveltimer = 23999;
+      leveltimer = 11999;
       p1.gaffyLogic();
       p1.xPos = 48;
       p1.yPos = 172;

@@ -32,7 +32,11 @@ class Menu
     textFont(Menu);
     if (isCredits == false)
     {
-      text("PRESS J TO SELECT", 64*d, 112*d);
+      text("PRESS   TO SELECT", 64*d, 112*d);
+      fill(#fcc900);
+      text("      J", 64*d, 112*d);
+      fill(255);
+
       if (t.debug == false)
       {
         text("START GAME", 80*d, 128*d);
@@ -70,7 +74,10 @@ class Menu
       text("FOR HELP GETTING TO", 32*d, 144*d);
 
       text("1.x BUILD", 32*d, 160*d);
-      text("PRESS K TO RETURN", 32*d, 192*d);
+      text("PRESS   TO RETURN", 32*d, 192*d);
+      fill(#01cd00);
+      text("      K", 32*d, 192*d);
+      fill(255);
     }
     //Title
     if (isCredits == false)
@@ -86,7 +93,7 @@ class Menu
 
       textFont(Menu);
       fill(255);
-      text("C 2024-202x GAFFY", 128*d, 216*d);
+      text("C 2024-"+ year() +" GAFFY", 128*d, 216*d);
     }
   }
   void keyHandler()
