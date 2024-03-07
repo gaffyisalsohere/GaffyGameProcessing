@@ -274,6 +274,14 @@ class Gaffy
       if (keyk == true) //complicated grab logic
       {
         isGrabbing = true;
+        if (keyd == true && hammerTime  <=0)
+        {
+          xPos +=.75;
+        }
+        if (keya == true && hammerTime  <=0)
+        {
+          xPos -=.75;
+        }
       }
       if (keyk == false)
       {

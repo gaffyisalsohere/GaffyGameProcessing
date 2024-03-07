@@ -27,7 +27,7 @@ class Rat
 
     hitbox.xPos = (xPos/d)-2;
     hitbox.yPos = (yPos/d)-16;
-    hitbox.safe = safe;
+    hitbox.safe = true;
 
     if (speed > 1.5) //sanity check; dont fast the rat
     {

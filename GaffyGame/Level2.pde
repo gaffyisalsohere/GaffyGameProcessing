@@ -4,7 +4,7 @@ class Level2
   DollerAll doller;
   BoxAll boxes;
   Rat rat1, rat2;
-  MadRat mad1;
+  MadRat mad1, mad2;
   BusStop bus;
   int d, timestart;
   boolean levelInit, clear;
@@ -20,10 +20,11 @@ class Level2
     doller.LevelInit();
     boxes.LevelInit();
     rat1 = new Rat(224*d, 384*d, 0, 192*d, 288*d, 0.8);
-    rat2 = new Rat(512*d, 304*d, 0, 512*d, (592)*d, 1.2);
+    rat2 = new Rat(176*d, 256*d, 0, 192*d, 320*d, 1.2);
     mad1 = new MadRat(176*d, 256*d, 0, 192*d, 320*d, 0.8);
-    bus = new BusStop(768+128, 352)
-      ;
+    mad2 = new MadRat(512*d, 272*d, 0, 496*d, 576*d, 0.8);
+    bus = new BusStop(768+128, 352);
+    //    g17 = new Ground(480, 272, 112, 256);
   }
   void Render()
   {
@@ -47,6 +48,7 @@ class Level2
     rat1.Render();
     rat2.Render();
     mad1.Render();
+    mad2.Render();
     boxes.Render();
   }
 }
