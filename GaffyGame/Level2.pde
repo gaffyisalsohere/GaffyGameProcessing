@@ -38,8 +38,9 @@ class Level2
       t.p1.spawnY = 64;
       t.p1.xPos = 48;
       t.p1.yPos = 64;
-
-
+      t.levelClear = false;
+      t.tallyDone = false;
+      t.clearTimer = 180;
       levelInit = true;
     }
     bus.Render();

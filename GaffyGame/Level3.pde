@@ -37,7 +37,9 @@ class Level3
       t.p1.spawnY = 384;
       t.p1.xPos = 48;
       t.p1.yPos = 384;
-
+      t.levelClear = false;
+      t.tallyDone = false;
+      t.clearTimer = 180;
       levelInit = true;
     }
 

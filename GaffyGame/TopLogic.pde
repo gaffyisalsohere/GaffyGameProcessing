@@ -72,7 +72,7 @@ class TopLogic
         {
 
 
-          clearTimer =180;
+          clearTimer = 180;
 
           levelID = 2;
         }
