@@ -77,7 +77,7 @@ class TopLogic
         }
       }
     }
-    if (dollers >= 100)
+    if (dollers >= 20)
     {
       oneup.play();
       lives++;
