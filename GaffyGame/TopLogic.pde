@@ -91,11 +91,11 @@ class TopLogic
     {
       hp = 3;
     }
-    if (dollers >= 15)
+    if (dollers >= 16)
     {
       oneup.play();
       lives++;
-      dollers -= 15;
+      dollers -= 16;
     }
     if (t.p1.gameover == true)
     {

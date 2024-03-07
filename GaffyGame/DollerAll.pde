@@ -29,6 +29,17 @@ class DollerAll
     d19 = new Doller(80, 96);
     d20 = new Doller(160, 240);
     d21 = new Doller(64, 96);
+    d22 = new Doller(192, 192);
+    d23 = new Doller(224, 192);
+    d24 = new Doller(256, 192);
+    d25 = new Doller(288, 192);
+    d26 = new Doller(320, 192);
+    d27 = new Doller(544, 224);
+    d28 = new Doller(560, 224);
+    d29 = new Doller(576, 224);
+    d30 = new Doller(592, 224);
+    d31 = new Doller(752, 208);
+    d32 = new Doller(720, 208);
   }
   void LevelInit()
   { //arrayify doller for convenience
@@ -63,6 +74,17 @@ class DollerAll
       dollers = (Doller[])  append(dollers, d19);
       dollers = (Doller[])  append(dollers, d20);
       dollers = (Doller[])  append(dollers, d21);
+      dollers = (Doller[])  append(dollers, d22);
+      dollers = (Doller[])  append(dollers, d23);
+      dollers = (Doller[])  append(dollers, d24);
+      dollers = (Doller[])  append(dollers, d25);
+      dollers = (Doller[])  append(dollers, d26);
+      dollers = (Doller[])  append(dollers, d27);
+      dollers = (Doller[])  append(dollers, d28);
+      dollers = (Doller[])  append(dollers, d29);
+      dollers = (Doller[])  append(dollers, d30);
+      dollers = (Doller[])  append(dollers, d31);
+      dollers = (Doller[])  append(dollers, d32);
     }
     if (level == 3)
     {
