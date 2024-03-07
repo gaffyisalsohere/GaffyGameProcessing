@@ -14,7 +14,7 @@ class TopLogic
   float xCam, yCam;
   TopLogic()
   { //define objects in TopLogic's Domain.
-    debug = true;
+
     d = 3;
     manyClouds = new Cloud[6];
     for (int i = 0; i<manyClouds.length; i+=1)
